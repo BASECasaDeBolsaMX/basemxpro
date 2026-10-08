@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="BASEMAXPRO - Gestión Patrimonial y administración profesional de patrimonio."
+  />
   <title>BASEMAXPRO | Gestión Patrimonial</title>
 
   <style>
@@ -42,9 +46,22 @@
       width: 52%;
       min-height: 100vh;
       background:
-        radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.10), transparent 30%),
-        radial-gradient(circle at 85% 80%, rgba(37, 99, 235, 0.12), transparent 32%),
-        linear-gradient(135deg, #060a13 0%, #0c1425 52%, #080e1b 100%);
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(212, 175, 55, 0.10),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(37, 99, 235, 0.12),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #060a13 0%,
+          #0c1425 52%,
+          #080e1b 100%
+        );
       display: flex;
       align-items: center;
       justify-content: center;
@@ -282,6 +299,10 @@
       transition: all 0.2s ease;
     }
 
+    .form-input::placeholder {
+      color: #94a3b8;
+    }
+
     .form-input:focus {
       border-color: #3b82f6;
       box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.10);
@@ -296,7 +317,7 @@
       padding-right: 54px;
     }
 
-    /* MOSTRAR / OCULTAR CONTRASEÑA */
+    /* MOSTRAR Y OCULTAR CONTRASEÑA */
     .toggle-password {
       position: absolute;
       right: 14px;
@@ -437,6 +458,11 @@
     .contact-button:hover {
       transform: translateY(-3px) scale(1.04);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+    }
+
+    .contact-button:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.45);
+      outline-offset: 3px;
     }
 
     .contact-button svg {
@@ -966,7 +992,7 @@
     <section class="brand-panel">
       <div class="brand-content">
 
-        <!-- Logotipo premium de BASE -->
+        <!-- LOGOTIPO PREMIUM DE BASE -->
         <div class="premium-logo">
           <div class="logo-diamond"></div>
           <div class="logo-diamond-inner"></div>
@@ -990,8 +1016,8 @@
         </div>
 
         <p class="brand-description">
-          Soluciones profesionales para la gestión y administración de
-          patrimonio. Accede a tu cuenta para continuar.
+          Soluciones profesionales para la gestión y administración
+          de patrimonio. Accede a tu cuenta para continuar.
         </p>
 
       </div>
@@ -1012,7 +1038,7 @@
 
         <form id="loginForm">
 
-          <!-- Usuario -->
+          <!-- TELÉFONO O NÚMERO DE CUENTA -->
           <div class="form-group">
             <label
               class="form-label"
@@ -1030,11 +1056,12 @@
                 placeholder="Introduce tu teléfono o cuenta"
                 minlength="9"
                 autocomplete="username"
+                inputmode="tel"
               />
             </div>
           </div>
 
-          <!-- Contraseña -->
+          <!-- CONTRASEÑA -->
           <div class="form-group">
             <label
               class="form-label"
@@ -1066,7 +1093,7 @@
             </div>
           </div>
 
-          <!-- Contraseña olvidada -->
+          <!-- CONTRASEÑA OLVIDADA -->
           <div class="forgot-row">
             <button
               type="button"
@@ -1077,7 +1104,7 @@
             </button>
           </div>
 
-          <!-- Botón de inicio de sesión -->
+          <!-- BOTÓN DE INICIO DE SESIÓN -->
           <button
             type="submit"
             class="login-button"
@@ -1095,6 +1122,7 @@
 
         </form>
 
+        <!-- PIE DE PÁGINA -->
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
@@ -1104,8 +1132,7 @@
 
   </div>
 
-  <!-- BOTONES FLOTANTES -->
-
+  <!-- BOTONES DE CONTACTO FLOTANTES -->
   <div class="contact-buttons">
 
     <!-- CNBV -->
@@ -1237,8 +1264,7 @@
 
   </div>
 
-  <!-- NOTIFICACIONES -->
-
+  <!-- NOTIFICACIÓN -->
   <div
     class="toast"
     id="toast"
@@ -1271,7 +1297,7 @@
 
     let toastTimer;
 
-    /* Mostrar notificación */
+    /* Mostrar una notificación */
     function showToast(title, message) {
       toastTitle.textContent = title;
       toastMessage.textContent = message;
@@ -1285,7 +1311,7 @@
       }, 3500);
     }
 
-    /* Mostrar / ocultar contraseña */
+    /* Mostrar y ocultar la contraseña */
     togglePassword.addEventListener("click", () => {
       const isPassword = passwordInput.type === "password";
 
@@ -1312,7 +1338,7 @@
       );
     });
 
-    /* Recuperación de contraseña */
+    /* Solicitud de recuperación de contraseña */
     forgotPassword.addEventListener("click", (event) => {
       event.preventDefault();
 
@@ -1322,7 +1348,7 @@
       );
     });
 
-    /* WhatsApp */
+    /* Aviso de WhatsApp */
     whatsappButton.addEventListener("click", () => {
       showToast(
         "WhatsApp",
@@ -1330,7 +1356,7 @@
       );
     });
 
-    /* Inicio de sesión */
+    /* Procesar el inicio de sesión */
     loginForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
@@ -1340,7 +1366,7 @@
       usernameInput.classList.remove("input-error");
       passwordInput.classList.remove("input-error");
 
-      /* Validación del teléfono o número de cuenta */
+      /* Validar teléfono o número de cuenta */
       if (username.length < 9) {
         usernameInput.classList.add("input-error");
         usernameInput.focus();
@@ -1353,7 +1379,7 @@
         return;
       }
 
-      /* Validación de contraseña */
+      /* Validar contraseña */
       if (password.length < 3) {
         passwordInput.classList.add("input-error");
         passwordInput.focus();
@@ -1366,7 +1392,7 @@
         return;
       }
 
-      /* Estado de carga */
+      /* Mostrar estado de carga */
       loginButton.classList.add("loading");
       loginButton.disabled = true;
 
@@ -1381,7 +1407,7 @@
       }, 1500);
     });
 
-    /* Eliminar errores al escribir */
+    /* Eliminar el estado de error al escribir */
     usernameInput.addEventListener("input", () => {
       usernameInput.classList.remove("input-error");
     });
