@@ -839,12 +839,12 @@
       background:
         linear-gradient(
           145deg,
-          #171717 0%,
-          #050505 100%
+          #111827,
+          #030712
         );
 
       border:
-        1px solid rgba(255, 255, 255, 0.18);
+        2px solid rgba(255, 255, 255, 0.18);
 
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.38),
@@ -854,66 +854,40 @@
     .nasdaq-button:hover {
       box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.48),
-        0 0 0 1px rgba(255, 255, 255, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+        0 0 18px rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
     .nasdaq-logo {
-      width: 46px;
-      height: 34px;
+      width: 38px;
+      height: 38px;
+
+      position: relative;
 
       display: flex;
 
       align-items: center;
       justify-content: center;
 
+      border:
+        1px solid rgba(255, 255, 255, 0.45);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          rgba(255, 255, 255, 0.14),
+          rgba(255, 255, 255, 0.02) 60%
+        );
+
+      box-shadow:
+        inset 0 0 12px rgba(255, 255, 255, 0.05),
+        0 0 12px rgba(255, 255, 255, 0.05);
+    }
+
+    .nasdaq-n {
       position: relative;
-
-      overflow: hidden;
-
-      border-radius: 6px;
-    }
-
-    .nasdaq-wave {
-      position: absolute;
-
-      width: 31px;
-      height: 16px;
-
-      left: 2px;
-      top: 4px;
-
-      border-top: 2px solid #ffffff;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.75);
-
-      transform:
-        skewY(-18deg)
-        rotate(-3deg);
-
-      opacity: 0.95;
-    }
-
-    .nasdaq-wave::before {
-      content: "";
-
-      position: absolute;
-
-      width: 27px;
-      height: 2px;
-
-      background: #ffffff;
-
-      left: 1px;
-      top: 5px;
-
-      transform: rotate(-7deg);
-    }
-
-    .nasdaq-text {
-      position: absolute;
-
-      right: -1px;
-      bottom: 2px;
 
       color: #ffffff;
 
@@ -922,13 +896,37 @@
         Helvetica,
         sans-serif;
 
-      font-size: 7px;
+      font-size: 21px;
+
+      line-height: 1;
 
       font-weight: 900;
 
-      letter-spacing: -0.4px;
+      letter-spacing: -2px;
 
-      line-height: 1;
+      transform: scaleX(0.92);
+    }
+
+    .nasdaq-n::after {
+      content: "";
+
+      position: absolute;
+
+      width: 22px;
+      height: 1px;
+
+      left: 0;
+      bottom: -5px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #ffffff,
+          transparent
+        );
+
+      opacity: 0.65;
     }
 
     /* ========================================
@@ -939,12 +937,12 @@
       background:
         linear-gradient(
           145deg,
-          #1d222d 0%,
-          #11151d 100%
+          #111827,
+          #070b13
         );
 
       border:
-        1px solid rgba(255, 255, 255, 0.16);
+        2px solid rgba(255, 255, 255, 0.16);
 
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.34),
@@ -953,14 +951,14 @@
 
     .tradingview-button:hover {
       box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.42),
-        0 0 0 1px rgba(255, 255, 255, 0.10),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+        0 12px 32px rgba(0, 0, 0, 0.45),
+        0 0 18px rgba(255, 255, 255, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
     .tradingview-logo {
-      width: 34px;
-      height: 34px;
+      width: 39px;
+      height: 39px;
 
       position: relative;
 
@@ -968,114 +966,76 @@
 
       align-items: center;
       justify-content: center;
-    }
 
-    .tradingview-cloud {
-      position: relative;
+      overflow: hidden;
 
-      width: 29px;
-      height: 23px;
-
-      border-radius:
-        7px 8px 8px 7px;
+      border-radius: 10px;
 
       background:
         linear-gradient(
-          135deg,
-          #2962ff,
-          #00a8ff
+          145deg,
+          #1e293b,
+          #0b1019
         );
+
+      border:
+        1px solid rgba(255, 255, 255, 0.20);
 
       box-shadow:
-        0 4px 10px rgba(0, 132, 255, 0.25);
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
     }
 
-    .tradingview-cloud::before {
+    .tradingview-logo::before {
       content: "";
 
       position: absolute;
 
-      width: 13px;
-      height: 13px;
-
-      border-radius: 50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2962ff,
-          #00a8ff
-        );
-
-      left: 5px;
-      top: -6px;
-    }
-
-    .tradingview-cloud::after {
-      content: "";
-
-      position: absolute;
-
-      width: 12px;
-      height: 12px;
-
-      border-radius: 50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2962ff,
-          #00a8ff
-        );
-
-      right: 4px;
-      top: -3px;
-    }
-
-    .tradingview-mark {
-      position: absolute;
-
-      z-index: 3;
-
-      width: 17px;
-      height: 15px;
-
-      left: 7px;
-      top: 5px;
-    }
-
-    .tradingview-mark::before {
-      content: "";
-
-      position: absolute;
-
-      width: 15px;
+      width: 24px;
       height: 3px;
 
-      background: #ffffff;
+      left: 7px;
+      bottom: 9px;
 
-      left: 0;
-      top: 0;
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #cbd5e1
+        );
 
-      border-radius: 2px;
+      transform:
+        rotate(-31deg)
+        skewX(-18deg);
+
+      border-radius: 3px;
+
+      box-shadow:
+        5px -5px 0 -0.2px rgba(255, 255, 255, 0.95),
+        10px -10px 0 -0.4px rgba(255, 255, 255, 0.90);
     }
 
-    .tradingview-mark::after {
-      content: "";
+    .tradingview-tv {
+      position: relative;
 
-      position: absolute;
+      z-index: 2;
 
-      width: 3px;
-      height: 15px;
+      color: #ffffff;
 
-      background: #ffffff;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-      left: 5px;
-      top: 0;
+      font-size: 13px;
 
-      transform: skewX(-16deg);
+      line-height: 1;
 
-      border-radius: 2px;
+      font-weight: 900;
+
+      letter-spacing: -1px;
+
+      text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.65);
     }
 
     /* ========================================
@@ -1343,11 +1303,21 @@
       }
 
       .nasdaq-logo {
-        transform: scale(0.86);
+        width: 34px;
+        height: 34px;
+      }
+
+      .nasdaq-n {
+        font-size: 19px;
       }
 
       .tradingview-logo {
-        transform: scale(0.86);
+        width: 34px;
+        height: 34px;
+      }
+
+      .tradingview-tv {
+        font-size: 12px;
       }
 
       .toast {
@@ -1369,7 +1339,7 @@
 
       <div class="brand-content">
 
-        <!-- Premium BASE Logo -->
+        <!-- PREMIUM BASE LOGO -->
 
         <div class="premium-logo">
 
@@ -1407,6 +1377,7 @@
 
     </section>
 
+
     <!-- ========================================
          LOGIN PANEL
     ======================================== -->
@@ -1427,6 +1398,7 @@
           </p>
 
         </div>
+
 
         <form id="loginForm">
 
@@ -1456,6 +1428,7 @@
             </div>
 
           </div>
+
 
           <!-- PASSWORD -->
 
@@ -1493,6 +1466,7 @@
 
           </div>
 
+
           <!-- FORGOT PASSWORD -->
 
           <div class="forgot-row">
@@ -1507,7 +1481,8 @@
 
           </div>
 
-          <!-- LOGIN -->
+
+          <!-- LOGIN BUTTON -->
 
           <button
             type="submit"
@@ -1525,6 +1500,7 @@
 
         </form>
 
+
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
@@ -1541,6 +1517,7 @@
   ======================================== -->
 
   <div class="contact-buttons">
+
 
     <!-- ======================================
          CNBV
@@ -1613,10 +1590,8 @@
 
       <div class="nasdaq-logo">
 
-        <div class="nasdaq-wave"></div>
-
-        <div class="nasdaq-text">
-          NASDAQ
+        <div class="nasdaq-n">
+          N
         </div>
 
       </div>
@@ -1639,9 +1614,9 @@
 
       <div class="tradingview-logo">
 
-        <div class="tradingview-cloud"></div>
-
-        <div class="tradingview-mark"></div>
+        <div class="tradingview-tv">
+          TV
+        </div>
 
       </div>
 
