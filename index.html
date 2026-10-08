@@ -15,13 +15,10 @@
     :root {
       --navy: #080d18;
       --navy-light: #101a2d;
-
       --gold: #d4af37;
       --gold-light: #f3d675;
       --gold-dark: #9d7b19;
-
       --blue: #2563eb;
-
       --white: #ffffff;
       --gray: #94a3b8;
     }
@@ -115,7 +112,6 @@
       position: relative;
       z-index: 2;
     }
-
 
     /* ========================================
        PREMIUM BASE LOGO
@@ -252,7 +248,6 @@
         0 1px 1px 0;
     }
 
-
     /* ========================================
        BRAND TEXT
     ======================================== */
@@ -316,7 +311,6 @@
       color: #cbd5e1;
     }
 
-
     /* ========================================
        LOGIN PANEL
     ======================================== */
@@ -362,7 +356,6 @@
 
       line-height: 1.6;
     }
-
 
     /* ========================================
        FORM
@@ -457,7 +450,6 @@
       color: #334155;
     }
 
-
     /* ========================================
        FORGOT PASSWORD
     ======================================== */
@@ -489,7 +481,6 @@
     .forgot-password:hover {
       text-decoration: underline;
     }
-
 
     /* ========================================
        LOGIN BUTTON
@@ -581,7 +572,6 @@
       }
     }
 
-
     /* ========================================
        FOOTER
     ======================================== */
@@ -597,7 +587,6 @@
 
       line-height: 1.6;
     }
-
 
     /* ========================================
        FLOATING BUTTONS
@@ -658,7 +647,6 @@
 
       fill: #ffffff;
     }
-
 
     /* ========================================
        CNBV
@@ -769,7 +757,6 @@
       padding: 0 2px;
     }
 
-
     /* ========================================
        BINANCE
     ======================================== */
@@ -844,6 +831,117 @@
       background: #111111;
     }
 
+    /* ========================================
+       NASDAQ
+    ======================================== */
+
+    .nasdaq-button {
+      background:
+        linear-gradient(
+          145deg,
+          #0b5bd3,
+          #003b91
+        );
+
+      border:
+        2px solid rgba(255, 255, 255, 0.80);
+
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    .nasdaq-button:hover {
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    }
+
+    .nasdaq-logo {
+      width: 39px;
+      height: 32px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .nasdaq-bars {
+      position: absolute;
+
+      width: 28px;
+      height: 25px;
+
+      left: 5px;
+      top: 2px;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: center;
+
+      gap: 2px;
+
+      transform: skewX(-13deg);
+    }
+
+    .nasdaq-bar {
+      width: 4px;
+
+      border-radius: 2px 2px 0 0;
+
+      background: #ffffff;
+
+      opacity: 0.95;
+    }
+
+    .nasdaq-bar:nth-child(1) {
+      height: 10px;
+    }
+
+    .nasdaq-bar:nth-child(2) {
+      height: 15px;
+    }
+
+    .nasdaq-bar:nth-child(3) {
+      height: 20px;
+    }
+
+    .nasdaq-bar:nth-child(4) {
+      height: 24px;
+    }
+
+    .nasdaq-bar:nth-child(5) {
+      height: 18px;
+    }
+
+    .nasdaq-word {
+      position: absolute;
+
+      bottom: -1px;
+
+      left: 0;
+
+      width: 100%;
+
+      text-align: center;
+
+      color: #ffffff;
+
+      font-size: 7px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      line-height: 1;
+
+      text-transform: uppercase;
+    }
 
     /* ========================================
        TELEGRAM
@@ -853,7 +951,6 @@
       background: #229ed9;
     }
 
-
     /* ========================================
        EMAIL
     ======================================== */
@@ -862,7 +959,6 @@
       background: #2563eb;
     }
 
-
     /* ========================================
        WHATSAPP
     ======================================== */
@@ -870,7 +966,6 @@
     .whatsapp-button {
       background: #25d366;
     }
-
 
     /* ========================================
        TOAST
@@ -938,7 +1033,6 @@
       line-height: 1.5;
     }
 
-
     /* ========================================
        RESPONSIVE
     ======================================== */
@@ -1004,7 +1098,6 @@
           45px 25px 120px;
       }
     }
-
 
     @media (max-width: 480px) {
 
@@ -1114,6 +1207,28 @@
         height: 7px;
       }
 
+      .nasdaq-logo {
+        width: 34px;
+        height: 29px;
+      }
+
+      .nasdaq-bars {
+        width: 25px;
+        height: 22px;
+
+        left: 4px;
+        top: 1px;
+      }
+
+      .nasdaq-bar {
+        width: 3.5px;
+      }
+
+      .nasdaq-word {
+        font-size: 6px;
+        letter-spacing: 0.8px;
+      }
+
       .toast {
         bottom: 20px;
       }
@@ -1121,20 +1236,17 @@
   </style>
 </head>
 
-
 <body>
 
   <div class="page">
 
-
-    <!-- =====================================
+    <!-- ========================================
          BRAND PANEL
-    ====================================== -->
+    ======================================== -->
 
     <section class="brand-panel">
 
       <div class="brand-content">
-
 
         <!-- Premium BASE Logo -->
 
@@ -1155,19 +1267,15 @@
 
         </div>
 
-
         <div class="brand-line"></div>
-
 
         <div class="brand-logo">
           BASEMAX<span>PRO</span>
         </div>
 
-
         <div class="brand-subtitle">
           Wealth Management
         </div>
-
 
         <p class="brand-description">
           Soluciones profesionales para la gestión y administración
@@ -1179,15 +1287,13 @@
     </section>
 
 
-
-    <!-- =====================================
+    <!-- ========================================
          LOGIN PANEL
-    ====================================== -->
+    ======================================== -->
 
     <section class="login-panel">
 
       <div class="login-card">
-
 
         <div class="login-header">
 
@@ -1203,9 +1309,7 @@
         </div>
 
 
-
         <form id="loginForm">
-
 
           <!-- USERNAME -->
 
@@ -1233,7 +1337,6 @@
             </div>
 
           </div>
-
 
 
           <!-- PASSWORD -->
@@ -1273,7 +1376,6 @@
           </div>
 
 
-
           <!-- FORGOT PASSWORD -->
 
           <div class="forgot-row">
@@ -1287,7 +1389,6 @@
             </button>
 
           </div>
-
 
 
           <!-- LOGIN -->
@@ -1309,7 +1410,6 @@
         </form>
 
 
-
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
@@ -1321,17 +1421,15 @@
   </div>
 
 
-
-  <!-- =====================================
+  <!-- ========================================
        FLOATING BUTTONS
-  ====================================== -->
+  ======================================== -->
 
   <div class="contact-buttons">
 
-
-    <!-- =====================================
+    <!-- ========================================
          CNBV
-    ====================================== -->
+    ======================================== -->
 
     <a
       href="https://www.cnbv.gob.mx/paginas/busquedaentidades.aspx"
@@ -1355,10 +1453,9 @@
     </a>
 
 
-
-    <!-- =====================================
+    <!-- ========================================
          BINANCE
-    ====================================== -->
+    ======================================== -->
 
     <a
       href="https://accounts.binance.bh/es-MX/register?ref=48488446&gad_source=1&gad_campaignid=22139133298&gclid=EAIaIQobChMIoZqrkI-qlwMVpVwPAh325CaqEAAYASAAEgLnZvD_BwE"
@@ -1386,10 +1483,43 @@
     </a>
 
 
+    <!-- ========================================
+         NASDAQ
+    ======================================== -->
 
-    <!-- =====================================
+    <a
+      href="https://www.nasdaq.com/market-activity"
+      class="contact-button nasdaq-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Consultar Nasdaq Market Activity"
+      title="NASDAQ - Market Activity"
+    >
+
+      <div class="nasdaq-logo">
+
+        <div class="nasdaq-bars">
+
+          <span class="nasdaq-bar"></span>
+          <span class="nasdaq-bar"></span>
+          <span class="nasdaq-bar"></span>
+          <span class="nasdaq-bar"></span>
+          <span class="nasdaq-bar"></span>
+
+        </div>
+
+        <div class="nasdaq-word">
+          NASDAQ
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <!-- ========================================
          TELEGRAM
-    ====================================== -->
+    ======================================== -->
 
     <a
       href="https://t.me/BASE_CasaDeBolsaMX"
@@ -1414,10 +1544,9 @@
     </a>
 
 
-
-    <!-- =====================================
+    <!-- ========================================
          EMAIL
-    ====================================== -->
+    ======================================== -->
 
     <a
       href="mailto:BASECasaDeBolsaMX@gmail.com"
@@ -1440,10 +1569,9 @@
     </a>
 
 
-
-    <!-- =====================================
+    <!-- ========================================
          WHATSAPP
-    ====================================== -->
+    ======================================== -->
 
     <button
       type="button"
@@ -1469,10 +1597,9 @@
   </div>
 
 
-
-  <!-- =====================================
+  <!-- ========================================
        TOAST
-  ====================================== -->
+  ======================================== -->
 
   <div
     class="toast"
@@ -1490,7 +1617,6 @@
     ></div>
 
   </div>
-
 
 
   <script>
@@ -1532,7 +1658,6 @@
     let toastTimer;
 
 
-
     /* =====================================
        TOAST
     ====================================== */
@@ -1554,7 +1679,6 @@
       }, 3500);
 
     }
-
 
 
     /* =====================================
@@ -1589,7 +1713,6 @@
     );
 
 
-
     /* =====================================
        FORGOT PASSWORD
     ====================================== */
@@ -1607,7 +1730,6 @@
     );
 
 
-
     /* =====================================
        WHATSAPP
     ====================================== */
@@ -1623,7 +1745,6 @@
 
       }
     );
-
 
 
     /* =====================================
@@ -1722,7 +1843,6 @@
 
       }
     );
-
 
 
     /* =====================================
