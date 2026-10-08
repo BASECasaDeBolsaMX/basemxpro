@@ -1,1345 +1,599 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>BASEMAX | Wealth Management</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BASEMAXPRO | Wealth Management</title>
 
   <style>
-
     * {
       box-sizing: border-box;
-    }
-
-    :root {
-      --navy: #071426;
-      --navy-2: #0b1d35;
-      --blue: #1d5fd1;
-      --blue-light: #4c8dff;
-      --silver: #aeb9c8;
-      --text: #172033;
-      --muted: #738096;
-      --border: #dce2ea;
-      --white: #ffffff;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1020;
+      color: #fff;
       min-height: 100vh;
-
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-      background:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(50, 110, 190, 0.16),
-          transparent 32%
-        ),
-        #071426;
-
-      color: var(--text);
+      overflow-x: hidden;
     }
-
-
-    /* =========================
-       MAIN LAYOUT
-    ========================= */
 
     .page {
       min-height: 100vh;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 520px;
+      display: flex;
+      position: relative;
     }
 
-
     /* =========================
-       LEFT BRAND AREA
-    ========================= */
-
+       LEFT BRAND PANEL
+    ========================== */
     .brand-panel {
-      position: relative;
-
-      overflow: hidden;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-      padding: 46px 7vw;
-
-      color: white;
-
+      width: 52%;
+      min-height: 100vh;
       background:
-        linear-gradient(
-          135deg,
-          rgba(6, 20, 38, 0.96),
-          rgba(10, 34, 62, 0.94)
-        );
+        radial-gradient(circle at 30% 20%, rgba(49, 130, 206, 0.18), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.15), transparent 35%),
+        linear-gradient(135deg, #0a1020 0%, #111a31 55%, #0c1428 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
     }
 
     .brand-panel::before {
       content: "";
-
       position: absolute;
-
-      width: 520px;
-      height: 520px;
-
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 50%;
-
-      right: -220px;
-      top: -170px;
-
-      background:
-        rgba(72, 132, 218, 0.10);
-
-      filter: blur(4px);
+      top: -180px;
+      left: -180px;
     }
 
     .brand-panel::after {
       content: "";
-
       position: absolute;
-
-      width: 360px;
-      height: 360px;
-
+      width: 700px;
+      height: 700px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 50%;
-
-      left: -170px;
-      bottom: -180px;
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.08);
+      right: -350px;
+      bottom: -350px;
     }
-
-
-    .brand-logo {
-      position: relative;
-
-      z-index: 2;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 13px;
-
-      font-size: 22px;
-
-      font-weight: 800;
-
-      letter-spacing: 2px;
-    }
-
-
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-
-      display: grid;
-
-      place-items: center;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.25);
-
-      border-radius: 11px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #173b67,
-          #0d223d
-        );
-
-      box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,0.12),
-
-        0 10px 30px
-        rgba(0,0,0,0.25);
-    }
-
-
-    .logo-mark span {
-      width: 16px;
-      height: 16px;
-
-      border:
-        2px solid
-        #aebfd4;
-
-      transform:
-        rotate(45deg);
-
-      border-radius: 3px;
-    }
-
 
     .brand-content {
+      max-width: 620px;
       position: relative;
-
       z-index: 2;
-
-      max-width: 600px;
-
-      margin: auto 0;
-
-      padding: 70px 0;
     }
 
+    .brand-logo {
+      font-size: clamp(46px, 7vw, 92px);
+      font-weight: 900;
+      letter-spacing: -4px;
+      line-height: 0.95;
+      color: #ffffff;
+      margin-bottom: 28px;
+    }
 
-    .eyebrow {
-      display: inline-flex;
+    .brand-logo span {
+      color: #3b82f6;
+    }
 
-      align-items: center;
-
-      gap: 8px;
-
-      color: #b8c9dd;
-
-      font-size: 12px;
-
-      font-weight: 700;
-
-      letter-spacing: 2px;
-
+    .brand-subtitle {
+      font-size: 18px;
+      color: #94a3b8;
+      letter-spacing: 3px;
       text-transform: uppercase;
-
-      margin-bottom: 22px;
+      margin-bottom: 34px;
     }
-
-
-    .eyebrow::before {
-      content: "";
-
-      width: 25px;
-      height: 1px;
-
-      background:
-        #7694b7;
-    }
-
-
-    .brand-content h2 {
-      margin: 0;
-
-      max-width: 600px;
-
-      font-size:
-        clamp(38px, 4vw, 62px);
-
-      line-height: 1.05;
-
-      font-weight: 500;
-
-      letter-spacing: -2px;
-    }
-
-
-    .brand-content h2 strong {
-      font-weight: 750;
-    }
-
 
     .brand-description {
-      max-width: 500px;
-
-      margin-top: 25px;
-
-      color: #aab9ca;
-
+      max-width: 520px;
       font-size: 16px;
-
       line-height: 1.8;
+      color: #cbd5e1;
     }
 
-
-    .security-badge {
-      position: relative;
-
-      z-index: 2;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-      color: #aebdcd;
-
-      font-size: 12px;
+    .brand-line {
+      width: 90px;
+      height: 4px;
+      background: #3b82f6;
+      border-radius: 10px;
+      margin-bottom: 28px;
     }
-
-
-    .security-icon {
-      width: 32px;
-      height: 32px;
-
-      display: grid;
-
-      place-items: center;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.13);
-
-      border-radius: 9px;
-
-      background:
-        rgba(255,255,255,0.04);
-    }
-
 
     /* =========================
        LOGIN PANEL
-    ========================= */
-
+    ========================== */
     .login-panel {
+      width: 48%;
       min-height: 100vh;
-
+      background: #f8fafc;
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      padding: 35px;
-
-      background:
-        #f5f7fa;
+      padding: 40px;
+      color: #0f172a;
     }
-
 
     .login-card {
       width: 100%;
-
-      max-width: 410px;
-
-      padding: 42px;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.7);
-
-      border-radius: 22px;
-
-      background:
-        rgba(255,255,255,0.88);
-
-      box-shadow:
-        0 30px 70px
-        rgba(3, 15, 32, 0.12),
-
-        0 8px 25px
-        rgba(3, 15, 32, 0.05);
-
-      backdrop-filter:
-        blur(18px);
-
-      animation:
-        cardIn 0.6s ease both;
+      max-width: 430px;
     }
 
-
-    @keyframes cardIn {
-
-      from {
-        opacity: 0;
-
-        transform:
-          translateY(16px);
-      }
-
-      to {
-        opacity: 1;
-
-        transform:
-          translateY(0);
-      }
-
-    }
-
-
-    .mobile-logo {
-      display: none;
-
-      justify-content: center;
-
-      align-items: center;
-
-      gap: 10px;
-
+    .login-header {
       margin-bottom: 34px;
+    }
 
-      color:
-        var(--navy);
-
+    .login-header h1 {
+      font-size: 34px;
       font-weight: 800;
-
-      letter-spacing: 2px;
+      color: #0f172a;
+      margin-bottom: 10px;
     }
 
-
-    .mobile-logo .logo-mark {
-      width: 32px;
-      height: 32px;
-
-      border-color:
-        #d7dee8;
-
-      background:
-        linear-gradient(
-          135deg,
-          #f5f8fc,
-          #dfe7f0
-        );
-    }
-
-
-    .mobile-logo .logo-mark span {
-      border-color:
-        #193a62;
-    }
-
-
-    .login-card h1 {
-      margin: 0;
-
-      font-size: 31px;
-
-      letter-spacing: -0.8px;
-
-      font-weight: 700;
-
-      color:
-        #101a2a;
-    }
-
-
-    .login-subtitle {
-      margin:
-        10px 0 31px;
-
-      color:
-        var(--muted);
-
-      font-size: 14px;
-
+    .login-header p {
+      color: #64748b;
+      font-size: 15px;
       line-height: 1.6;
     }
 
-
-    /* =========================
-       FORM
-    ========================= */
-
-    .field {
-      margin-bottom: 19px;
+    .form-group {
+      margin-bottom: 20px;
     }
 
-
-    .field label {
+    .form-label {
       display: block;
-
       margin-bottom: 8px;
-
-      color:
-        #303b4c;
-
-      font-size: 13px;
-
-      font-weight: 650;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
     }
 
-
-    .input-wrap {
+    .input-wrapper {
       position: relative;
     }
 
-
-    .input-wrap input {
+    .form-input {
       width: 100%;
-
-      height: 52px;
-
-      padding: 0 15px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius: 11px;
-
+      height: 54px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 0 16px;
+      font-size: 15px;
       outline: none;
-
-      background:
-        #fbfcfd;
-
-      color:
-        #172033;
-
-      font-size: 14px;
-
-      transition:
-        border-color 0.2s,
-        box-shadow 0.2s,
-        background 0.2s;
+      background: #ffffff;
+      color: #0f172a;
+      transition: all 0.2s ease;
     }
 
-
-    .input-wrap input::placeholder {
-      color:
-        #a0aaba;
+    .form-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
     }
 
-
-    .input-wrap input:focus {
-      border-color:
-        #477bc5;
-
-      background:
-        white;
-
-      box-shadow:
-        0 0 0 4px
-        rgba(39, 98, 177, 0.08);
+    .form-input.input-error {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
     }
-
-
-    .input-wrap input.input-error {
-      border-color:
-        #d9534f;
-
-      background:
-        #fffafa;
-
-      box-shadow:
-        0 0 0 4px
-        rgba(217, 83, 79, 0.06);
-    }
-
 
     .password-input {
-      padding-right:
-        75px !important;
+      padding-right: 54px;
     }
-
 
     .toggle-password {
       position: absolute;
-
+      right: 14px;
       top: 50%;
-      right: 12px;
-
-      transform:
-        translateY(-50%);
-
-      border: 0;
-
-      background:
-        transparent;
-
-      color:
-        #315f99;
-
-      font-size: 12px;
-
-      font-weight: 650;
-
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
       cursor: pointer;
-
-      padding: 7px;
+      color: #64748b;
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
     }
 
+    .toggle-password:hover {
+      background: #f1f5f9;
+      color: #334155;
+    }
 
-    .form-row {
+    .forgot-row {
       display: flex;
-
       justify-content: flex-end;
-
-      margin:
-        -3px 0 22px;
+      margin-top: -8px;
+      margin-bottom: 22px;
     }
 
-
-    .forgot {
-      color:
-        #315f99;
-
-      text-decoration:
-        none;
-
-      font-size: 12px;
-
+    .forgot-password {
+      border: none;
+      background: transparent;
+      color: #2563eb;
+      font-size: 14px;
+      cursor: pointer;
       font-weight: 600;
     }
 
-
-    .forgot:hover {
-      text-decoration:
-        underline;
+    .forgot-password:hover {
+      text-decoration: underline;
     }
-
-
-    /* =========================
-       LOGIN BUTTON
-    ========================= */
 
     .login-button {
-      position: relative;
-
       width: 100%;
-      height: 52px;
-
-      border: 0;
-
-      border-radius: 11px;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          115deg,
-          #153d70,
-          #2568c8,
-          #397de0
-        );
-
-      font-size: 14px;
-
-      font-weight: 700;
-
+      height: 56px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 800;
       cursor: pointer;
-
-      overflow: hidden;
-
-      box-shadow:
-        0 10px 22px
-        rgba(29, 95, 185, 0.22);
-
-      transition:
-        transform 0.2s,
-        box-shadow 0.2s,
-        opacity 0.2s;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
-
 
     .login-button:hover {
-      transform:
-        translateY(-1px);
-
-      box-shadow:
-        0 13px 27px
-        rgba(29, 95, 185, 0.28);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
     }
-
 
     .login-button:active {
-      transform:
-        translateY(0);
+      transform: translateY(0);
     }
-
 
     .login-button.loading {
-      pointer-events:
-        none;
+      cursor: wait;
+      opacity: 0.85;
     }
-
-
-    .button-text {
-      transition:
-        opacity 0.2s;
-    }
-
 
     .spinner {
-      position: absolute;
-
-      width: 19px;
-      height: 19px;
-
-      left: 50%;
-      top: 50%;
-
-      margin:
-        -9.5px 0 0 -9.5px;
-
-      border:
-        2px solid
-        rgba(255,255,255,0.35);
-
-      border-top-color:
-        white;
-
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      border-top-color: #ffffff;
       border-radius: 50%;
-
-      opacity: 0;
-
-      animation:
-        spin 0.7s linear infinite;
+      animation: spin 0.8s linear infinite;
+      display: none;
     }
 
-
-    .login-button.loading
-    .button-text {
-      opacity: 0;
+    .login-button.loading .spinner {
+      display: block;
     }
 
-
-    .login-button.loading
-    .spinner {
-      opacity: 1;
+    .login-button.loading .button-text {
+      display: none;
     }
-
 
     @keyframes spin {
-
       to {
-        transform:
-          rotate(360deg);
+        transform: rotate(360deg);
       }
-
     }
 
-
-    /* =========================
-       SECURITY
-    ========================= */
-
-    .secure-note {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 7px;
-
-      margin-top: 22px;
-
-      color:
-        #8792a2;
-
-      font-size: 11px;
+    .login-footer {
+      text-align: center;
+      margin-top: 24px;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.6;
     }
-
-
-    .secure-dot {
-      width: 6px;
-      height: 6px;
-
-      border-radius: 50%;
-
-      background:
-        #4b8b6b;
-
-      box-shadow:
-        0 0 0 4px
-        rgba(75,139,107,0.08);
-    }
-
 
     /* =========================
        CONTACT BUTTONS
-    ========================= */
-
+    ========================== */
     .contact-buttons {
       position: fixed;
-
-      right: 25px;
-      bottom: 25px;
-
-      z-index: 9999;
-
+      right: 22px;
+      bottom: 22px;
       display: flex;
-
       flex-direction: column;
-
-      align-items: center;
-
       gap: 12px;
+      z-index: 9999;
     }
-
 
     .contact-button {
       width: 58px;
       height: 58px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
       border-radius: 50%;
-
-      text-decoration: none;
-
-      cursor: pointer;
-
       border: none;
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
 
     .contact-button:hover {
-      transform:
-        scale(1.08);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     }
-
-
-    .contact-button:active {
-      transform:
-        scale(0.96);
-    }
-
 
     .contact-button svg {
       width: 29px;
       height: 29px;
-
-      fill: white;
+      fill: #ffffff;
     }
-
-
-    /* Telegram */
 
     .telegram-button {
-      background:
-        #229ED9;
-
-      box-shadow:
-        0 8px 24px
-        rgba(34, 158, 217, 0.35);
+      background: #229ed9;
     }
-
-
-    .telegram-button:hover {
-      box-shadow:
-        0 12px 30px
-        rgba(34, 158, 217, 0.45);
-    }
-
-
-    /* Email */
 
     .email-button {
-      background:
-        #4285F4;
-
-      box-shadow:
-        0 8px 24px
-        rgba(66, 133, 244, 0.32);
+      background: #2563eb;
     }
-
-
-    .email-button:hover {
-      box-shadow:
-        0 12px 30px
-        rgba(66, 133, 244, 0.42);
-    }
-
-
-    /* WhatsApp */
 
     .whatsapp-button {
-      background:
-        #25D366;
-
-      box-shadow:
-        0 8px 24px
-        rgba(37, 211, 102, 0.32);
+      background: #25d366;
     }
-
-
-    .whatsapp-button:hover {
-      box-shadow:
-        0 12px 30px
-        rgba(37, 211, 102, 0.42);
-    }
-
 
     /* =========================
        TOAST
-    ========================= */
-
+    ========================== */
     .toast {
       position: fixed;
-
-      z-index: 10000;
-
-      right: 26px;
-      bottom: 26px;
-
-      display: flex;
-
-      align-items: flex-start;
-
-      gap: 11px;
-
-      min-width: 290px;
-
-      max-width: 380px;
-
-      padding: 15px 17px;
-
-      border:
-        1px solid
-        rgba(220, 226, 234, 0.9);
-
-      border-radius: 13px;
-
-      background:
-        rgba(255,255,255,0.96);
-
-      box-shadow:
-        0 16px 40px
-        rgba(0,0,0,0.13);
-
-      backdrop-filter:
-        blur(16px);
-
+      left: 50%;
+      bottom: 32px;
+      transform: translateX(-50%) translateY(30px);
+      min-width: 300px;
+      max-width: calc(100vw - 40px);
+      background: rgba(15, 23, 42, 0.96);
+      color: #ffffff;
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
       opacity: 0;
-
-      transform:
-        translateY(15px);
-
-      pointer-events:
-        none;
-
-      transition:
-        opacity 0.25s,
-        transform 0.25s;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 10000;
+      text-align: center;
     }
-
 
     .toast.show {
       opacity: 1;
-
-      transform:
-        translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
-
-
-    .toast-icon {
-      width: 27px;
-      height: 27px;
-
-      flex:
-        0 0 27px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 50%;
-
-      background:
-        #eef3f8;
-
-      color:
-        #345d88;
-
-      font-size: 13px;
-    }
-
 
     .toast-title {
-      margin-bottom: 2px;
-
-      color:
-        #182335;
-
-      font-size: 13px;
-
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
     }
 
-
     .toast-message {
-      color:
-        #7b8797;
-
-      font-size: 11px;
-
+      font-size: 13px;
+      color: #cbd5e1;
       line-height: 1.5;
     }
 
-
     /* =========================
        RESPONSIVE
-    ========================= */
-
+    ========================== */
     @media (max-width: 900px) {
-
       .page {
-        grid-template-columns:
-          1fr;
+        display: block;
       }
-
 
       .brand-panel {
-        display:
-          none;
+        width: 100%;
+        min-height: 270px;
+        padding: 45px 30px;
       }
 
+      .brand-content {
+        max-width: 700px;
+      }
+
+      .brand-logo {
+        font-size: 58px;
+      }
+
+      .brand-subtitle {
+        margin-bottom: 20px;
+      }
+
+      .brand-description {
+        display: none;
+      }
 
       .login-panel {
-        min-height:
-          100vh;
-
-        padding:
-          24px;
+        width: 100%;
+        min-height: calc(100vh - 270px);
+        padding: 45px 25px 100px;
       }
-
-
-      .mobile-logo {
-        display:
-          flex;
-      }
-
-
-      .login-card {
-        max-width:
-          430px;
-      }
-
     }
-
 
     @media (max-width: 480px) {
+      .brand-panel {
+        min-height: 220px;
+        padding: 35px 22px;
+      }
+
+      .brand-logo {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .brand-subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
 
       .login-panel {
-        padding:
-          16px;
-
-        align-items:
-          center;
+        padding: 35px 20px 100px;
       }
 
-
-      .login-card {
-        padding:
-          31px 22px 25px;
-
-        border-radius:
-          18px;
-
-        box-shadow:
-          0 18px 45px
-          rgba(3, 15, 32, 0.08);
+      .login-header h1 {
+        font-size: 29px;
       }
-
-
-      .mobile-logo {
-        margin-bottom:
-          29px;
-      }
-
-
-      .login-card h1 {
-        font-size:
-          28px;
-      }
-
 
       .contact-buttons {
-        right:
-          18px;
-
-        bottom:
-          18px;
-
-        gap:
-          9px;
+        right: 14px;
+        bottom: 14px;
+        gap: 9px;
       }
-
 
       .contact-button {
-        width:
-          52px;
-
-        height:
-          52px;
+        width: 50px;
+        height: 50px;
       }
-
 
       .contact-button svg {
-        width:
-          26px;
-
-        height:
-          26px;
+        width: 25px;
+        height: 25px;
       }
-
 
       .toast {
-        left:
-          16px;
-
-        right:
-          16px;
-
-        bottom:
-          16px;
-
-        min-width:
-          0;
+        bottom: 20px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <main class="page">
-
+  <div class="page">
 
     <!-- =========================
-         DESKTOP BRAND PANEL
+         BRAND PANEL
     ========================== -->
-
     <section class="brand-panel">
-
-
-      <div class="brand-logo">
-
-        <div class="logo-mark">
-          <span></span>
-        </div>
-
-        BASEMAX
-
-      </div>
-
-
       <div class="brand-content">
 
-        <div class="eyebrow">
+        <div class="brand-line"></div>
+
+        <div class="brand-logo">
+          BASEMAX<span>PRO</span>
+        </div>
+
+        <div class="brand-subtitle">
           Wealth Management
         </div>
 
-
-        <h2>
-
-          Gestión patrimonial
-
-          <strong>
-            con visión.
-          </strong>
-
-        </h2>
-
-
         <p class="brand-description">
-
-          Accede a tu espacio financiero y gestiona
-          tu información de forma sencilla, segura
-          y desde cualquier dispositivo.
-
+          Soluciones profesionales para la gestión y administración
+          de patrimonio. Accede a tu cuenta para continuar.
         </p>
 
       </div>
-
-
-      <div class="security-badge">
-
-        <div class="security-icon">
-          ✓
-        </div>
-
-        <span>
-          Conexión protegida y acceso seguro
-        </span>
-
-      </div>
-
-
     </section>
 
 
     <!-- =========================
          LOGIN PANEL
     ========================== -->
-
     <section class="login-panel">
-
-
       <div class="login-card">
 
-
-        <div class="mobile-logo">
-
-          <div class="logo-mark">
-            <span></span>
-          </div>
-
-          BASEMAX
-
+        <div class="login-header">
+          <h1>Iniciar sesión</h1>
+          <p>
+            Introduce tu teléfono o número de cuenta y tu contraseña
+            para acceder.
+          </p>
         </div>
-
-
-        <h1>
-          Bienvenido de nuevo
-        </h1>
-
-
-        <p class="login-subtitle">
-          Introduce tus datos para acceder a tu espacio.
-        </p>
-
 
         <form id="loginForm">
 
-
-          <!-- USERNAME -->
-
-          <div class="field">
-
-            <label for="username">
-              Teléfono o usuario
+          <div class="form-group">
+            <label class="form-label" for="username">
+              Teléfono / Número de cuenta
             </label>
 
-
-            <div class="input-wrap">
-
+            <div class="input-wrapper">
               <input
-                type="text"
                 id="username"
                 name="username"
-                autocomplete="username"
-                placeholder="Introduce tu teléfono o usuario"
+                type="text"
+                class="form-input"
+                placeholder="Introduce tu teléfono o cuenta"
                 minlength="9"
-              >
-
+                autocomplete="username"
+              />
             </div>
-
           </div>
 
 
-          <!-- PASSWORD -->
-
-          <div class="field">
-
-            <label for="password">
+          <div class="form-group">
+            <label class="form-label" for="password">
               Contraseña
             </label>
 
-
-            <div class="input-wrap">
-
+            <div class="input-wrapper">
               <input
-                type="password"
                 id="password"
                 name="password"
-                class="password-input"
-                autocomplete="current-password"
+                type="password"
+                class="form-input password-input"
                 placeholder="Introduce tu contraseña"
                 minlength="3"
-              >
-
+                autocomplete="current-password"
+              />
 
               <button
                 type="button"
                 class="toggle-password"
                 id="togglePassword"
+                aria-label="Mostrar contraseña"
               >
-                Mostrar
+                👁
               </button>
-
             </div>
-
           </div>
 
 
-          <!-- FORGOT PASSWORD -->
-
-          <div class="form-row">
-
-            <a
-              href="#"
-              class="forgot"
+          <div class="forgot-row">
+            <button
+              type="button"
+              class="forgot-password"
               id="forgotPassword"
             >
               ¿Olvidaste tu contraseña?
-            </a>
-
+            </button>
           </div>
 
-
-          <!-- LOGIN -->
 
           <button
             type="submit"
             class="login-button"
             id="loginButton"
           >
-
-            <span class="button-text">
-              Iniciar sesión
-            </span>
-
+            <span class="button-text">Iniciar sesión</span>
             <span class="spinner"></span>
-
           </button>
-
 
         </form>
 
 
-        <div class="secure-note">
-
-          <span class="secure-dot"></span>
-
-          Conexión segura protegida
-
+        <div class="login-footer">
+          © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
 
-
       </div>
-
     </section>
 
-  </main>
+  </div>
 
 
   <!-- =========================
        CONTACT BUTTONS
   ========================== -->
-
   <div class="contact-buttons">
 
-
-    <!-- TELEGRAM -->
-
+    <!-- Telegram -->
     <a
       href="https://t.me/BASE_CasaDeBolsaMX"
       class="contact-button telegram-button"
@@ -1348,42 +602,26 @@
       aria-label="Contactar por Telegram"
       title="Telegram"
     >
-
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-
-        <path d="M21.4 3.6L18.2 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.3-1.1-1 .2-1.5L20 3.2c.9-.3 1.7.2 1.4.4z"/>
-
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21.8 3.2c.3-1.2-.4-1.7-1.4-1.3L2.1 9.1c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.4.3-.3 1.1-1.1 2.1-2.1l5.1-3.8 5.3 3.9c1 .6 1.7.3 1.9-.9l3-14.7zM7.3 11.7l11.8-7.4c.6-.4 1.1-.2.7.2l-9.7 8.8-.4 3.5-1.7-5.1-.7-.2z"/>
       </svg>
-
     </a>
 
 
-    <!-- EMAIL -->
-
+    <!-- Email -->
     <a
       href="mailto:BASECasaDeBolsaMX@gmail.com"
       class="contact-button email-button"
       aria-label="Enviar correo electrónico"
       title="Correo electrónico"
     >
-
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-
+      <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-
       </svg>
-
     </a>
 
 
-    <!-- WHATSAPP -->
-
+    <!-- WhatsApp -->
     <button
       type="button"
       class="contact-button whatsapp-button"
@@ -1391,18 +629,10 @@
       aria-label="WhatsApp"
       title="WhatsApp"
     >
-
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-
-        <path d="M12.04 2C6.54 2 2.07 6.47 2.07 11.97c0 1.76.46 3.48 1.34 5L2 22l5.18-1.36a9.93 9.93 0 0 0 4.86 1.27h.01c5.49 0 9.96-4.47 9.96-9.97C22.01 6.47 17.54 2 12.04 2zm5.79 14.32c-.24.68-1.4 1.3-1.92 1.35-.49.05-1.11.07-1.79-.11-.41-.11-.94-.3-1.62-.59-2.84-1.23-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.38.26-.29.57-.36.76-.36.19 0 .38 0 .54.01.17.01.41-.07.64.49.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.32-.29.49-.14.17-.3.38-.43.51-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.93 1.06.94 1.96 1.23 2.24 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.29.37-.24.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.54.33.07.12.07.7-.17 1.38z"/>
-
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.33 5.03L2 22l5.08-1.3a10 10 0 0 0 4.96 1.27h.01C17.58 21.97 22 17.47 22 12.03 22 6.5 17.58 2 12.04 2zm0 18.3c-1.55 0-3.07-.42-4.4-1.22l-.31-.18-3.02.77.81-2.94-.2-.32a8.3 8.3 0 1 1 7.12 3.89zm4.55-6.23c-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.57.12-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.36-1.7-.14-.25-.02-.38.1-.5.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.87-.2-.48-.41-.41-.57-.42h-.49c-.17 0-.45.06-.69.32-.24.25-.9.88-.9 2.14 0 1.26.92 2.47 1.05 2.64.12.17 1.8 2.76 4.37 3.87.61.26 1.09.42 1.46.54.61.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
       </svg>
-
     </button>
-
 
   </div>
 
@@ -1410,343 +640,160 @@
   <!-- =========================
        TOAST
   ========================== -->
-
-  <div
-    class="toast"
-    id="toast"
-    role="status"
-    aria-live="polite"
-  >
-
-    <div class="toast-icon">
-      !
-    </div>
-
-
-    <div>
-
-      <div
-        class="toast-title"
-        id="toastTitle"
-      >
-        Acceso no disponible
-      </div>
-
-
-      <div
-        class="toast-message"
-        id="toastMessage"
-      >
-        No se pudo completar la solicitud.
-      </div>
-
-    </div>
-
+  <div class="toast" id="toast">
+    <div class="toast-title" id="toastTitle"></div>
+    <div class="toast-message" id="toastMessage"></div>
   </div>
 
 
   <script>
+    const loginForm = document.getElementById("loginForm");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const loginButton = document.getElementById("loginButton");
+    const togglePassword = document.getElementById("togglePassword");
+    const forgotPassword = document.getElementById("forgotPassword");
+    const whatsappButton = document.getElementById("whatsappButton");
 
-
-    /* =========================
-       ELEMENTS
-    ========================= */
-
-    const form =
-      document.getElementById(
-        "loginForm"
-      );
-
-
-    const username =
-      document.getElementById(
-        "username"
-      );
-
-
-    const password =
-      document.getElementById(
-        "password"
-      );
-
-
-    const togglePassword =
-      document.getElementById(
-        "togglePassword"
-      );
-
-
-    const loginButton =
-      document.getElementById(
-        "loginButton"
-      );
-
-
-    const toast =
-      document.getElementById(
-        "toast"
-      );
-
-
-    const toastTitle =
-      document.getElementById(
-        "toastTitle"
-      );
-
-
-    const toastMessage =
-      document.getElementById(
-        "toastMessage"
-      );
-
-
-    const whatsappButton =
-      document.getElementById(
-        "whatsappButton"
-      );
-
+    const toast = document.getElementById("toast");
+    const toastTitle = document.getElementById("toastTitle");
+    const toastMessage = document.getElementById("toastMessage");
 
     let toastTimer;
 
 
     /* =========================
-       PASSWORD SHOW / HIDE
-    ========================= */
+       TOAST FUNCTION
+    ========================== */
+    function showToast(title, message) {
+      toastTitle.textContent = title;
+      toastMessage.textContent = message;
 
-    togglePassword.addEventListener(
-      "click",
-      () => {
+      toast.classList.add("show");
 
-        const isPassword =
-          password.type ===
-          "password";
+      clearTimeout(toastTimer);
 
-
-        password.type =
-          isPassword
-            ? "text"
-            : "password";
-
-
-        togglePassword.textContent =
-          isPassword
-            ? "Ocultar"
-            : "Mostrar";
-
-      }
-    );
-
-
-    /* =========================
-       TOAST
-    ========================= */
-
-    function showToast(
-      title,
-      message
-    ) {
-
-      toastTitle.textContent =
-        title;
-
-
-      toastMessage.textContent =
-        message;
-
-
-      toast.classList.add(
-        "show"
-      );
-
-
-      clearTimeout(
-        toastTimer
-      );
-
-
-      toastTimer =
-        setTimeout(
-          () => {
-
-            toast.classList.remove(
-              "show"
-            );
-
-          },
-          4500
-        );
-
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
     }
 
 
     /* =========================
-       CLEAR ERROR
-    ========================= */
+       PASSWORD SHOW / HIDE
+    ========================== */
+    togglePassword.addEventListener("click", () => {
+      const isPassword = passwordInput.type === "password";
 
-    username.addEventListener(
-      "input",
-      () => {
+      passwordInput.type = isPassword ? "text" : "password";
 
-        username.classList.remove(
-          "input-error"
-        );
+      togglePassword.textContent = isPassword ? "🙈" : "👁";
 
-      }
-    );
-
-
-    password.addEventListener(
-      "input",
-      () => {
-
-        password.classList.remove(
-          "input-error"
-        );
-
-      }
-    );
-
-
-    /* =========================
-       LOGIN VALIDATION
-    ========================= */
-
-    form.addEventListener(
-      "submit",
-      (event) => {
-
-        event.preventDefault();
-
-
-        const usernameValue =
-          username.value.trim();
-
-
-        const passwordValue =
-          password.value;
-
-
-        /* USERNAME */
-
-        if (
-          usernameValue.length < 9
-        ) {
-
-          username.classList.add(
-            "input-error"
-          );
-
-
-          showToast(
-            "Datos incompletos",
-            "Introduce un teléfono o número de cuenta de al menos 9 caracteres."
-          );
-
-
-          username.focus();
-
-
-          return;
-
-        }
-
-
-        /* PASSWORD */
-
-        if (
-          passwordValue.length < 3
-        ) {
-
-          password.classList.add(
-            "input-error"
-          );
-
-
-          showToast(
-            "Datos incompletos",
-            "Introduce una contraseña de al menos 3 caracteres."
-          );
-
-
-          password.focus();
-
-
-          return;
-
-        }
-
-
-        /* VALIDATION PASSED */
-
-        loginButton.classList.add(
-          "loading"
-        );
-
-
-        setTimeout(
-          () => {
-
-            loginButton.classList.remove(
-              "loading"
-            );
-
-
-            showToast(
-              "Acceso no disponible",
-              "No se pudo completar el inicio de sesión debido a restricciones de red."
-            );
-
-          },
-          1100
-        );
-
-      }
-    );
+      togglePassword.setAttribute(
+        "aria-label",
+        isPassword ? "Ocultar contraseña" : "Mostrar contraseña"
+      );
+    });
 
 
     /* =========================
        FORGOT PASSWORD
-    ========================= */
-
-    document
-      .getElementById(
-        "forgotPassword"
-      )
-      .addEventListener(
-        "click",
-        (event) => {
-
-          event.preventDefault();
-
-
-          showToast(
-            "Recuperación de acceso",
-            "请联系官方人员处理"
-          );
-
-        }
+    ========================== */
+    forgotPassword.addEventListener("click", () => {
+      showToast(
+        "提示",
+        "请联系官方人员处理"
       );
+    });
 
 
     /* =========================
        WHATSAPP
-    ========================= */
+    ========================== */
+    whatsappButton.addEventListener("click", () => {
+      showToast(
+        "WhatsApp",
+        "暂时暂停WhatsApp处理业务"
+      );
+    });
 
-    whatsappButton.addEventListener(
-      "click",
-      () => {
+
+    /* =========================
+       LOGIN
+    ========================== */
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value;
+
+      usernameInput.classList.remove("input-error");
+      passwordInput.classList.remove("input-error");
+
+
+      /* Username validation */
+      if (username.length < 9) {
+        usernameInput.classList.add("input-error");
+        usernameInput.focus();
 
         showToast(
-          "WhatsApp",
-          "暂时暂停WhatsApp处理业务"
+          "Datos incompletos",
+          "Introduce un teléfono o número de cuenta de al menos 9 caracteres."
         );
 
+        return;
       }
-    );
 
+
+      /* Password validation */
+      if (password.length < 3) {
+        passwordInput.classList.add("input-error");
+        passwordInput.focus();
+
+        showToast(
+          "Datos incompletos",
+          "Introduce una contraseña de al menos 3 caracteres."
+        );
+
+        return;
+      }
+
+
+      /* Loading state */
+      loginButton.classList.add("loading");
+      loginButton.disabled = true;
+
+
+      /*
+        Demo behavior:
+        No credentials are sent or stored.
+      */
+      setTimeout(() => {
+
+        loginButton.classList.remove("loading");
+        loginButton.disabled = false;
+
+        showToast(
+          "Acceso no disponible",
+          "No se pudo completar el inicio de sesión debido a restricciones de red."
+        );
+
+      }, 1500);
+    });
+
+
+    /* =========================
+       REMOVE ERROR WHEN USER TYPES
+    ========================== */
+    usernameInput.addEventListener("input", () => {
+      usernameInput.classList.remove("input-error");
+    });
+
+    passwordInput.addEventListener("input", () => {
+      passwordInput.classList.remove("input-error");
+    });
 
   </script>
 
 </body>
-
 </html>
