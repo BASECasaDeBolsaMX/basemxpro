@@ -839,27 +839,27 @@
       background:
         linear-gradient(
           145deg,
-          #0b5bd3,
-          #003b91
+          #111827,
+          #020617
         );
 
       border:
-        2px solid rgba(255, 255, 255, 0.80);
+        2px solid rgba(255, 255, 255, 0.65);
 
       box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        0 8px 24px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
     }
 
     .nasdaq-button:hover {
       box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.34),
-        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        0 12px 30px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
     }
 
     .nasdaq-logo {
-      width: 39px;
-      height: 32px;
+      width: 38px;
+      height: 38px;
 
       display: flex;
 
@@ -869,78 +869,149 @@
       position: relative;
     }
 
-    .nasdaq-bars {
-      position: absolute;
+    .nasdaq-mark {
+      width: 31px;
+      height: 31px;
 
-      width: 28px;
-      height: 25px;
+      border: 2px solid #ffffff;
 
-      left: 5px;
-      top: 2px;
+      border-radius: 7px;
 
       display: flex;
 
-      align-items: flex-end;
-
+      align-items: center;
       justify-content: center;
 
-      gap: 2px;
+      position: relative;
 
-      transform: skewX(-13deg);
+      overflow: hidden;
     }
 
-    .nasdaq-bar {
-      width: 4px;
+    .nasdaq-mark::before,
+    .nasdaq-mark::after {
+      content: "";
 
-      border-radius: 2px 2px 0 0;
+      position: absolute;
+
+      width: 5px;
 
       background: #ffffff;
 
-      opacity: 0.95;
+      transform: skewX(-25deg);
+
+      border-radius: 2px;
     }
 
-    .nasdaq-bar:nth-child(1) {
-      height: 10px;
-    }
-
-    .nasdaq-bar:nth-child(2) {
-      height: 15px;
-    }
-
-    .nasdaq-bar:nth-child(3) {
-      height: 20px;
-    }
-
-    .nasdaq-bar:nth-child(4) {
+    .nasdaq-mark::before {
       height: 24px;
+      left: 8px;
+      top: 3px;
     }
 
-    .nasdaq-bar:nth-child(5) {
-      height: 18px;
+    .nasdaq-mark::after {
+      height: 24px;
+      right: 8px;
+      top: 3px;
     }
 
-    .nasdaq-word {
-      position: absolute;
+    .nasdaq-n {
+      position: relative;
 
-      bottom: -1px;
-
-      left: 0;
-
-      width: 100%;
-
-      text-align: center;
+      z-index: 2;
 
       color: #ffffff;
 
-      font-size: 7px;
+      font-size: 17px;
 
       font-weight: 900;
 
-      letter-spacing: 1px;
+      letter-spacing: -2px;
 
-      line-height: 1;
+      transform: scaleX(0.85);
+    }
 
-      text-transform: uppercase;
+    /* ========================================
+       TRADINGVIEW
+    ======================================== */
+
+    .tradingview-button {
+      background:
+        linear-gradient(
+          145deg,
+          #15191f,
+          #0b0d10
+        );
+
+      border:
+        2px solid rgba(255, 255, 255, 0.55);
+
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .tradingview-button:hover {
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .tradingview-logo {
+      width: 36px;
+      height: 36px;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tradingview-logo::before {
+      content: "";
+
+      position: absolute;
+
+      width: 25px;
+      height: 25px;
+
+      border-top: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+
+      top: 5px;
+      left: 3px;
+    }
+
+    .tradingview-logo::after {
+      content: "";
+
+      position: absolute;
+
+      width: 17px;
+      height: 17px;
+
+      border-top: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+
+      transform: rotate(90deg);
+
+      right: 2px;
+      bottom: 4px;
+    }
+
+    .tradingview-t {
+      position: relative;
+
+      z-index: 3;
+
+      color: #ffffff;
+
+      font-size: 18px;
+
+      font-weight: 900;
+
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     /* ========================================
@@ -1208,25 +1279,40 @@
       }
 
       .nasdaq-logo {
-        width: 34px;
+        width: 31px;
+        height: 31px;
+      }
+
+      .nasdaq-mark {
+        width: 27px;
+        height: 27px;
+      }
+
+      .nasdaq-n {
+        font-size: 15px;
+      }
+
+      .tradingview-logo {
+        width: 29px;
         height: 29px;
       }
 
-      .nasdaq-bars {
-        width: 25px;
-        height: 22px;
-
-        left: 4px;
-        top: 1px;
+      .tradingview-logo::before {
+        width: 21px;
+        height: 21px;
+        border-top-width: 4px;
+        border-left-width: 4px;
       }
 
-      .nasdaq-bar {
-        width: 3.5px;
+      .tradingview-logo::after {
+        width: 14px;
+        height: 14px;
+        border-top-width: 4px;
+        border-left-width: 4px;
       }
 
-      .nasdaq-word {
-        font-size: 6px;
-        letter-spacing: 0.8px;
+      .tradingview-t {
+        font-size: 16px;
       }
 
       .toast {
@@ -1240,9 +1326,7 @@
 
   <div class="page">
 
-    <!-- ========================================
-         BRAND PANEL
-    ======================================== -->
+    <!-- BRAND PANEL -->
 
     <section class="brand-panel">
 
@@ -1286,10 +1370,7 @@
 
     </section>
 
-
-    <!-- ========================================
-         LOGIN PANEL
-    ======================================== -->
+    <!-- LOGIN PANEL -->
 
     <section class="login-panel">
 
@@ -1307,7 +1388,6 @@
           </p>
 
         </div>
-
 
         <form id="loginForm">
 
@@ -1337,7 +1417,6 @@
             </div>
 
           </div>
-
 
           <!-- PASSWORD -->
 
@@ -1375,7 +1454,6 @@
 
           </div>
 
-
           <!-- FORGOT PASSWORD -->
 
           <div class="forgot-row">
@@ -1389,7 +1467,6 @@
             </button>
 
           </div>
-
 
           <!-- LOGIN -->
 
@@ -1409,7 +1486,6 @@
 
         </form>
 
-
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
@@ -1420,16 +1496,11 @@
 
   </div>
 
-
-  <!-- ========================================
-       FLOATING BUTTONS
-  ======================================== -->
+  <!-- FLOATING BUTTONS -->
 
   <div class="contact-buttons">
 
-    <!-- ========================================
-         CNBV
-    ======================================== -->
+    <!-- CNBV -->
 
     <a
       href="https://www.cnbv.gob.mx/paginas/busquedaentidades.aspx"
@@ -1452,10 +1523,7 @@
 
     </a>
 
-
-    <!-- ========================================
-         BINANCE
-    ======================================== -->
+    <!-- BINANCE -->
 
     <a
       href="https://accounts.binance.bh/es-MX/register?ref=48488446&gad_source=1&gad_campaignid=22139133298&gclid=EAIaIQobChMIoZqrkI-qlwMVpVwPAh325CaqEAAYASAAEgLnZvD_BwE"
@@ -1469,57 +1537,54 @@
       <div class="binance-logo">
 
         <div class="binance-diamond top"></div>
-
         <div class="binance-diamond left"></div>
-
         <div class="binance-diamond right"></div>
-
         <div class="binance-diamond bottom"></div>
-
         <div class="binance-diamond center"></div>
 
       </div>
 
     </a>
 
-
-    <!-- ========================================
-         NASDAQ
-    ======================================== -->
+    <!-- NASDAQ -->
 
     <a
       href="https://www.nasdaq.com/market-activity"
       class="contact-button nasdaq-button"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Consultar Nasdaq Market Activity"
+      aria-label="NASDAQ Market Activity"
       title="NASDAQ - Market Activity"
     >
 
       <div class="nasdaq-logo">
 
-        <div class="nasdaq-bars">
-
-          <span class="nasdaq-bar"></span>
-          <span class="nasdaq-bar"></span>
-          <span class="nasdaq-bar"></span>
-          <span class="nasdaq-bar"></span>
-          <span class="nasdaq-bar"></span>
-
-        </div>
-
-        <div class="nasdaq-word">
-          NASDAQ
+        <div class="nasdaq-mark">
+          <span class="nasdaq-n">N</span>
         </div>
 
       </div>
 
     </a>
 
+    <!-- TRADINGVIEW -->
 
-    <!-- ========================================
-         TELEGRAM
-    ======================================== -->
+    <a
+      href="https://www.tradingview.com/markets/stocks-mexico/?utm_source=chatgpt.com"
+      class="contact-button tradingview-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TradingView - Acciones de México"
+      title="TradingView - Mercados de México"
+    >
+
+      <div class="tradingview-logo">
+        <span class="tradingview-t">T</span>
+      </div>
+
+    </a>
+
+    <!-- TELEGRAM -->
 
     <a
       href="https://t.me/BASE_CasaDeBolsaMX"
@@ -1543,10 +1608,7 @@
 
     </a>
 
-
-    <!-- ========================================
-         EMAIL
-    ======================================== -->
+    <!-- EMAIL -->
 
     <a
       href="mailto:BASECasaDeBolsaMX@gmail.com"
@@ -1568,10 +1630,7 @@
 
     </a>
 
-
-    <!-- ========================================
-         WHATSAPP
-    ======================================== -->
+    <!-- WHATSAPP -->
 
     <button
       type="button"
@@ -1596,10 +1655,7 @@
 
   </div>
 
-
-  <!-- ========================================
-       TOAST
-  ======================================== -->
+  <!-- TOAST -->
 
   <div
     class="toast"
@@ -1617,7 +1673,6 @@
     ></div>
 
   </div>
-
 
   <script>
 
