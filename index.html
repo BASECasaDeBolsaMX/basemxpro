@@ -888,7 +888,8 @@
 
       width: 4px;
 
-      border-radius: 3px 3px 1px 1px;
+      border-radius:
+        3px 3px 1px 1px;
 
       background:
         linear-gradient(
@@ -1002,9 +1003,11 @@
       width: 29px;
       height: 13px;
 
-      border-left: 3px solid #42a5ff;
+      border-left:
+        3px solid #42a5ff;
 
-      border-bottom: 3px solid #42a5ff;
+      border-bottom:
+        3px solid #42a5ff;
 
       transform:
         skewY(-24deg)
@@ -1355,7 +1358,9 @@
 
   <div class="page">
 
-    <!-- BRAND PANEL -->
+    <!-- ========================================
+         BRAND PANEL
+    ========================================= -->
 
     <section class="brand-panel">
 
@@ -1399,7 +1404,10 @@
 
     </section>
 
-    <!-- LOGIN PANEL -->
+
+    <!-- ========================================
+         LOGIN PANEL
+    ========================================= -->
 
     <section class="login-panel">
 
@@ -1417,6 +1425,7 @@
           </p>
 
         </div>
+
 
         <form id="loginForm">
 
@@ -1446,6 +1455,7 @@
             </div>
 
           </div>
+
 
           <!-- PASSWORD -->
 
@@ -1483,6 +1493,7 @@
 
           </div>
 
+
           <!-- FORGOT PASSWORD -->
 
           <div class="forgot-row">
@@ -1496,6 +1507,7 @@
             </button>
 
           </div>
+
 
           <!-- LOGIN -->
 
@@ -1515,6 +1527,7 @@
 
         </form>
 
+
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
@@ -1533,7 +1546,9 @@
   <div class="contact-buttons">
 
 
-    <!-- CNBV -->
+    <!-- ======================================
+         CNBV
+    ======================================= -->
 
     <a
       href="https://www.cnbv.gob.mx/paginas/busquedaentidades.aspx"
@@ -1557,7 +1572,9 @@
     </a>
 
 
-    <!-- BINANCE -->
+    <!-- ======================================
+         BINANCE
+    ======================================= -->
 
     <a
       href="https://accounts.binance.bh/es-MX/register?ref=48488446&gad_source=1&gad_campaignid=22139133298&gclid=EAIaIQobChMIoZqrkI-qlwMVpVwPAh325CaqEAAYASAAEgLnZvD_BwE"
@@ -1585,15 +1602,17 @@
     </a>
 
 
-    <!-- NASDAQ -->
+    <!-- ======================================
+         NASDAQ
+    ======================================= -->
 
     <a
       href="https://www.nasdaq.com/market-activity"
       class="contact-button nasdaq-button"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Nasdaq Market Activity"
-      title="Nasdaq - Market Activity"
+      aria-label="Mercado Nasdaq"
+      title="Nasdaq - Actividad del mercado"
     >
 
       <div class="nasdaq-logo">
@@ -1617,15 +1636,17 @@
     </a>
 
 
-    <!-- TRADINGVIEW -->
+    <!-- ======================================
+         TRADINGVIEW
+    ======================================= -->
 
     <a
       href="https://www.tradingview.com/markets/stocks-mexico/?utm_source=chatgpt.com"
       class="contact-button tradingview-button"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="TradingView - Mexican stocks"
-      title="TradingView - Mexican Stocks"
+      aria-label="Acciones de México en TradingView"
+      title="TradingView - Acciones de México"
     >
 
       <div class="tradingview-logo">
@@ -1641,7 +1662,9 @@
     </a>
 
 
-    <!-- TELEGRAM -->
+    <!-- ======================================
+         TELEGRAM
+    ======================================= -->
 
     <a
       href="https://t.me/BASE_CasaDeBolsaMX"
@@ -1666,7 +1689,9 @@
     </a>
 
 
-    <!-- EMAIL -->
+    <!-- ======================================
+         EMAIL
+    ======================================= -->
 
     <a
       href="mailto:BASECasaDeBolsaMX@gmail.com"
@@ -1689,7 +1714,9 @@
     </a>
 
 
-    <!-- WHATSAPP -->
+    <!-- ======================================
+         WHATSAPP
+    ======================================= -->
 
     <button
       type="button"
@@ -1840,8 +1867,8 @@
       () => {
 
         showToast(
-          "提示",
-          "请联系官方人员处理"
+          "Información",
+          "Por favor, contacte con el personal oficial para gestionar su solicitud."
         );
 
       }
@@ -1858,7 +1885,7 @@
 
         showToast(
           "WhatsApp",
-          "暂时暂停WhatsApp处理业务"
+          "El servicio de WhatsApp está temporalmente suspendido."
         );
 
       }
@@ -1939,9 +1966,8 @@
 
 
         /*
-          Demo behavior.
-          No credentials are sent
-          or stored.
+          Comportamiento de demostración.
+          No se envían ni almacenan credenciales.
         */
 
         setTimeout(() => {
