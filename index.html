@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BASEMAX | Gestión Patrimonial</title>
+  <title>BASEMAX | Wealth Management</title>
 
   <style>
 
@@ -23,8 +26,6 @@
       --muted: #738096;
       --border: #dce2ea;
       --white: #ffffff;
-      --whatsapp: #25D366;
-      --telegram: #229ED9;
     }
 
     body {
@@ -60,20 +61,24 @@
 
       display: grid;
 
-      grid-template-columns: 1fr 520px;
+      grid-template-columns:
+        1fr 520px;
     }
 
 
     /* =========================
-       BRAND PANEL
+       LEFT BRAND AREA
     ========================= */
 
     .brand-panel {
       position: relative;
+
       overflow: hidden;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
 
       padding: 46px 7vw;
@@ -101,7 +106,8 @@
       right: -220px;
       top: -170px;
 
-      background: rgba(72, 132, 218, 0.10);
+      background:
+        rgba(72, 132, 218, 0.10);
 
       filter: blur(4px);
     }
@@ -119,37 +125,42 @@
       left: -170px;
       bottom: -180px;
 
-      border: 1px solid rgba(255,255,255,0.08);
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
     }
 
 
-    /* =========================
-       LOGO
-    ========================= */
-
     .brand-logo {
       position: relative;
+
       z-index: 2;
 
       display: flex;
+
       align-items: center;
 
       gap: 13px;
 
       font-size: 22px;
+
       font-weight: 800;
 
       letter-spacing: 2px;
     }
+
 
     .logo-mark {
       width: 38px;
       height: 38px;
 
       display: grid;
+
       place-items: center;
 
-      border: 1px solid rgba(255,255,255,0.25);
+      border:
+        1px solid
+        rgba(255,255,255,0.25);
 
       border-radius: 11px;
 
@@ -161,28 +172,32 @@
         );
 
       box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.12),
-        0 10px 30px rgba(0,0,0,0.25);
+        inset 0 1px 0
+        rgba(255,255,255,0.12),
+
+        0 10px 30px
+        rgba(0,0,0,0.25);
     }
+
 
     .logo-mark span {
       width: 16px;
       height: 16px;
 
-      border: 2px solid #aebfd4;
+      border:
+        2px solid
+        #aebfd4;
 
-      transform: rotate(45deg);
+      transform:
+        rotate(45deg);
 
       border-radius: 3px;
     }
 
 
-    /* =========================
-       BRAND CONTENT
-    ========================= */
-
     .brand-content {
       position: relative;
+
       z-index: 2;
 
       max-width: 600px;
@@ -192,8 +207,10 @@
       padding: 70px 0;
     }
 
+
     .eyebrow {
       display: inline-flex;
+
       align-items: center;
 
       gap: 8px;
@@ -201,6 +218,7 @@
       color: #b8c9dd;
 
       font-size: 12px;
+
       font-weight: 700;
 
       letter-spacing: 2px;
@@ -210,21 +228,25 @@
       margin-bottom: 22px;
     }
 
+
     .eyebrow::before {
       content: "";
 
       width: 25px;
       height: 1px;
 
-      background: #7694b7;
+      background:
+        #7694b7;
     }
+
 
     .brand-content h2 {
       margin: 0;
 
       max-width: 600px;
 
-      font-size: clamp(38px, 4vw, 62px);
+      font-size:
+        clamp(38px, 4vw, 62px);
 
       line-height: 1.05;
 
@@ -233,9 +255,11 @@
       letter-spacing: -2px;
     }
 
+
     .brand-content h2 strong {
       font-weight: 750;
     }
+
 
     .brand-description {
       max-width: 500px;
@@ -250,15 +274,13 @@
     }
 
 
-    /* =========================
-       SECURITY
-    ========================= */
-
     .security-badge {
       position: relative;
+
       z-index: 2;
 
       display: flex;
+
       align-items: center;
 
       gap: 12px;
@@ -268,100 +290,122 @@
       font-size: 12px;
     }
 
+
     .security-icon {
       width: 32px;
       height: 32px;
 
       display: grid;
+
       place-items: center;
 
-      border: 1px solid rgba(255,255,255,0.13);
+      border:
+        1px solid
+        rgba(255,255,255,0.13);
 
       border-radius: 9px;
 
-      background: rgba(255,255,255,0.04);
+      background:
+        rgba(255,255,255,0.04);
     }
 
 
     /* =========================
-       CONTENT PANEL
+       LOGIN PANEL
     ========================= */
 
-    .content-panel {
+    .login-panel {
       min-height: 100vh;
 
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       padding: 35px;
 
-      background: #f5f7fa;
+      background:
+        #f5f7fa;
     }
 
-    .content-card {
+
+    .login-card {
       width: 100%;
+
       max-width: 410px;
 
       padding: 42px;
 
-      border: 1px solid rgba(255,255,255,0.7);
+      border:
+        1px solid
+        rgba(255,255,255,0.7);
 
       border-radius: 22px;
 
-      background: rgba(255,255,255,0.88);
+      background:
+        rgba(255,255,255,0.88);
 
       box-shadow:
-        0 30px 70px rgba(3, 15, 32, 0.12),
-        0 8px 25px rgba(3, 15, 32, 0.05);
+        0 30px 70px
+        rgba(3, 15, 32, 0.12),
 
-      backdrop-filter: blur(18px);
+        0 8px 25px
+        rgba(3, 15, 32, 0.05);
 
-      animation: cardIn 0.6s ease both;
+      backdrop-filter:
+        blur(18px);
+
+      animation:
+        cardIn 0.6s ease both;
     }
+
 
     @keyframes cardIn {
 
       from {
         opacity: 0;
-        transform: translateY(16px);
+
+        transform:
+          translateY(16px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
 
     }
 
 
-    /* =========================
-       MOBILE LOGO
-    ========================= */
-
     .mobile-logo {
       display: none;
 
       justify-content: center;
+
       align-items: center;
 
       gap: 10px;
 
       margin-bottom: 34px;
 
-      color: var(--navy);
+      color:
+        var(--navy);
 
       font-weight: 800;
 
       letter-spacing: 2px;
     }
 
+
     .mobile-logo .logo-mark {
       width: 32px;
       height: 32px;
 
-      border-color: #d7dee8;
+      border-color:
+        #d7dee8;
 
       background:
         linear-gradient(
@@ -371,16 +415,14 @@
         );
     }
 
+
     .mobile-logo .logo-mark span {
-      border-color: #193a62;
+      border-color:
+        #193a62;
     }
 
 
-    /* =========================
-       CARD
-    ========================= */
-
-    .content-card h1 {
+    .login-card h1 {
       margin: 0;
 
       font-size: 31px;
@@ -389,13 +431,17 @@
 
       font-weight: 700;
 
-      color: #101a2a;
+      color:
+        #101a2a;
     }
 
-    .content-subtitle {
-      margin: 10px 0 31px;
 
-      color: var(--muted);
+    .login-subtitle {
+      margin:
+        10px 0 31px;
+
+      color:
+        var(--muted);
 
       font-size: 14px;
 
@@ -404,135 +450,280 @@
 
 
     /* =========================
-       CONTACT OPTIONS
+       FORM
     ========================= */
 
-    .contact-list {
-      display: flex;
-      flex-direction: column;
-
-      gap: 13px;
+    .field {
+      margin-bottom: 19px;
     }
 
-    .contact-card {
-      display: flex;
-      align-items: center;
 
-      gap: 14px;
+    .field label {
+      display: block;
 
+      margin-bottom: 8px;
+
+      color:
+        #303b4c;
+
+      font-size: 13px;
+
+      font-weight: 650;
+    }
+
+
+    .input-wrap {
+      position: relative;
+    }
+
+
+    .input-wrap input {
       width: 100%;
 
-      padding: 15px;
+      height: 52px;
 
-      border: 1px solid var(--border);
+      padding: 0 15px;
 
-      border-radius: 13px;
-
-      background: #fbfcfd;
-
-      color: #172033;
-
-      text-decoration: none;
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-2px);
-
-      background: #ffffff;
-
-      border-color: #cbd5e2;
-
-      box-shadow:
-        0 10px 25px rgba(3, 15, 32, 0.08);
-    }
-
-    .contact-icon {
-      width: 44px;
-      height: 44px;
-
-      flex: 0 0 44px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border:
+        1px solid
+        var(--border);
 
       border-radius: 11px;
+
+      outline: none;
+
+      background:
+        #fbfcfd;
+
+      color:
+        #172033;
+
+      font-size: 14px;
+
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
     }
 
-    .contact-icon svg {
-      width: 23px;
-      height: 23px;
 
-      fill: white;
+    .input-wrap input::placeholder {
+      color:
+        #a0aaba;
     }
 
-    .email-icon {
-      background: #315f99;
+
+    .input-wrap input:focus {
+      border-color:
+        #477bc5;
+
+      background:
+        white;
+
+      box-shadow:
+        0 0 0 4px
+        rgba(39, 98, 177, 0.08);
     }
 
-    .whatsapp-icon {
-      background: var(--whatsapp);
+
+    .input-wrap input.input-error {
+      border-color:
+        #d9534f;
+
+      background:
+        #fffafa;
+
+      box-shadow:
+        0 0 0 4px
+        rgba(217, 83, 79, 0.06);
     }
 
-    .telegram-icon {
-      background: var(--telegram);
+
+    .password-input {
+      padding-right:
+        75px !important;
     }
 
-    .contact-info {
+
+    .toggle-password {
+      position: absolute;
+
+      top: 50%;
+      right: 12px;
+
+      transform:
+        translateY(-50%);
+
+      border: 0;
+
+      background:
+        transparent;
+
+      color:
+        #315f99;
+
+      font-size: 12px;
+
+      font-weight: 650;
+
+      cursor: pointer;
+
+      padding: 7px;
+    }
+
+
+    .form-row {
       display: flex;
-      flex-direction: column;
 
-      gap: 3px;
+      justify-content: flex-end;
+
+      margin:
+        -3px 0 22px;
     }
 
-    .contact-title {
+
+    .forgot {
+      color:
+        #315f99;
+
+      text-decoration:
+        none;
+
+      font-size: 12px;
+
+      font-weight: 600;
+    }
+
+
+    .forgot:hover {
+      text-decoration:
+        underline;
+    }
+
+
+    /* =========================
+       LOGIN BUTTON
+    ========================= */
+
+    .login-button {
+      position: relative;
+
+      width: 100%;
+      height: 52px;
+
+      border: 0;
+
+      border-radius: 11px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          115deg,
+          #153d70,
+          #2568c8,
+          #397de0
+        );
+
       font-size: 14px;
 
       font-weight: 700;
 
-      color: #172033;
+      cursor: pointer;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 10px 22px
+        rgba(29, 95, 185, 0.22);
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        opacity 0.2s;
     }
 
-    .contact-description {
-      font-size: 11px;
 
-      line-height: 1.45;
+    .login-button:hover {
+      transform:
+        translateY(-1px);
 
-      color: #7b8797;
+      box-shadow:
+        0 13px 27px
+        rgba(29, 95, 185, 0.28);
+    }
+
+
+    .login-button:active {
+      transform:
+        translateY(0);
+    }
+
+
+    .login-button.loading {
+      pointer-events:
+        none;
+    }
+
+
+    .button-text {
+      transition:
+        opacity 0.2s;
+    }
+
+
+    .spinner {
+      position: absolute;
+
+      width: 19px;
+      height: 19px;
+
+      left: 50%;
+      top: 50%;
+
+      margin:
+        -9.5px 0 0 -9.5px;
+
+      border:
+        2px solid
+        rgba(255,255,255,0.35);
+
+      border-top-color:
+        white;
+
+      border-radius: 50%;
+
+      opacity: 0;
+
+      animation:
+        spin 0.7s linear infinite;
+    }
+
+
+    .login-button.loading
+    .button-text {
+      opacity: 0;
+    }
+
+
+    .login-button.loading
+    .spinner {
+      opacity: 1;
+    }
+
+
+    @keyframes spin {
+
+      to {
+        transform:
+          rotate(360deg);
+      }
+
     }
 
 
     /* =========================
-       NOTICE
-    ========================= */
-
-    .notice {
-      margin-top: 22px;
-
-      padding: 13px 14px;
-
-      border-radius: 11px;
-
-      background: #f1f5f9;
-
-      color: #6d7889;
-
-      font-size: 11px;
-
-      line-height: 1.55;
-
-      text-align: center;
-    }
-
-
-    /* =========================
-       SECURITY NOTE
+       SECURITY
     ========================= */
 
     .secure-note {
@@ -546,10 +737,12 @@
 
       margin-top: 22px;
 
-      color: #8792a2;
+      color:
+        #8792a2;
 
       font-size: 11px;
     }
+
 
     .secure-dot {
       width: 6px;
@@ -557,53 +750,74 @@
 
       border-radius: 50%;
 
-      background: #4b8b6b;
+      background:
+        #4b8b6b;
 
       box-shadow:
-        0 0 0 4px rgba(75,139,107,0.08);
+        0 0 0 4px
+        rgba(75,139,107,0.08);
     }
 
 
     /* =========================
-       FLOATING CONTACT BUTTONS
+       CONTACT BUTTONS
     ========================= */
 
-    .floating-button {
+    .contact-buttons {
       position: fixed;
 
       right: 25px;
+      bottom: 25px;
 
+      z-index: 9999;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 12px;
+    }
+
+
+    .contact-button {
       width: 58px;
       height: 58px;
 
       display: flex;
-      align-items: center;
-      justify-content: center;
 
-      border: 0;
+      align-items: center;
+
+      justify-content: center;
 
       border-radius: 50%;
 
+      text-decoration: none;
+
       cursor: pointer;
 
-      z-index: 9999;
-
-      text-decoration: none;
+      border: none;
 
       transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
     }
 
-    .floating-button:hover {
-      transform: scale(1.08);
+
+    .contact-button:hover {
+      transform:
+        scale(1.08);
     }
 
-    .floating-button:active {
-      transform: scale(0.96);
+
+    .contact-button:active {
+      transform:
+        scale(0.96);
     }
 
-    .floating-button svg {
+
+    .contact-button svg {
       width: 29px;
       height: 29px;
 
@@ -611,54 +825,60 @@
     }
 
 
-    /* CORREO */
-
-    .email-button {
-      bottom: 165px;
-
-      background: #315f99;
-
-      box-shadow:
-        0 8px 24px rgba(49, 95, 153, 0.30);
-    }
-
-    .email-button:hover {
-      box-shadow:
-        0 12px 30px rgba(49, 95, 153, 0.40);
-    }
-
-
-    /* WHATSAPP */
-
-    .whatsapp-button {
-      bottom: 95px;
-
-      background: var(--whatsapp);
-
-      box-shadow:
-        0 8px 24px rgba(37, 211, 102, 0.30);
-    }
-
-    .whatsapp-button:hover {
-      box-shadow:
-        0 12px 30px rgba(37, 211, 102, 0.40);
-    }
-
-
-    /* TELEGRAM */
+    /* Telegram */
 
     .telegram-button {
-      bottom: 25px;
-
-      background: var(--telegram);
+      background:
+        #229ED9;
 
       box-shadow:
-        0 8px 24px rgba(34, 158, 217, 0.35);
+        0 8px 24px
+        rgba(34, 158, 217, 0.35);
     }
+
 
     .telegram-button:hover {
       box-shadow:
-        0 12px 30px rgba(34, 158, 217, 0.45);
+        0 12px 30px
+        rgba(34, 158, 217, 0.45);
+    }
+
+
+    /* Email */
+
+    .email-button {
+      background:
+        #4285F4;
+
+      box-shadow:
+        0 8px 24px
+        rgba(66, 133, 244, 0.32);
+    }
+
+
+    .email-button:hover {
+      box-shadow:
+        0 12px 30px
+        rgba(66, 133, 244, 0.42);
+    }
+
+
+    /* WhatsApp */
+
+    .whatsapp-button {
+      background:
+        #25D366;
+
+      box-shadow:
+        0 8px 24px
+        rgba(37, 211, 102, 0.32);
+    }
+
+
+    .whatsapp-button:hover {
+      box-shadow:
+        0 12px 30px
+        rgba(37, 211, 102, 0.42);
     }
 
 
@@ -671,52 +891,65 @@
 
       z-index: 10000;
 
-      right: 100px;
-      bottom: 28px;
+      right: 26px;
+      bottom: 26px;
 
       display: flex;
+
       align-items: flex-start;
 
       gap: 11px;
 
       min-width: 290px;
-      max-width: 390px;
+
+      max-width: 380px;
 
       padding: 15px 17px;
 
-      border: 1px solid rgba(220, 226, 234, 0.9);
+      border:
+        1px solid
+        rgba(220, 226, 234, 0.9);
 
       border-radius: 13px;
 
-      background: rgba(255,255,255,0.96);
+      background:
+        rgba(255,255,255,0.96);
 
       box-shadow:
-        0 16px 40px rgba(0,0,0,0.13);
+        0 16px 40px
+        rgba(0,0,0,0.13);
 
-      backdrop-filter: blur(16px);
+      backdrop-filter:
+        blur(16px);
 
       opacity: 0;
 
-      transform: translateY(15px);
+      transform:
+        translateY(15px);
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
       transition:
         opacity 0.25s,
         transform 0.25s;
     }
 
+
     .toast.show {
       opacity: 1;
 
-      transform: translateY(0);
+      transform:
+        translateY(0);
     }
+
 
     .toast-icon {
       width: 27px;
       height: 27px;
 
-      flex: 0 0 27px;
+      flex:
+        0 0 27px;
 
       display: grid;
 
@@ -724,27 +957,31 @@
 
       border-radius: 50%;
 
-      background: #eef3f8;
+      background:
+        #eef3f8;
 
-      color: #345d88;
+      color:
+        #345d88;
 
       font-size: 13px;
-
-      font-weight: 700;
     }
+
 
     .toast-title {
       margin-bottom: 2px;
 
-      color: #182335;
+      color:
+        #182335;
 
       font-size: 13px;
 
       font-weight: 700;
     }
 
+
     .toast-message {
-      color: #7b8797;
+      color:
+        #7b8797;
 
       font-size: 11px;
 
@@ -759,25 +996,35 @@
     @media (max-width: 900px) {
 
       .page {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
+
 
       .brand-panel {
-        display: none;
+        display:
+          none;
       }
 
-      .content-panel {
-        min-height: 100vh;
 
-        padding: 24px;
+      .login-panel {
+        min-height:
+          100vh;
+
+        padding:
+          24px;
       }
+
 
       .mobile-logo {
-        display: flex;
+        display:
+          flex;
       }
 
-      .content-card {
-        max-width: 430px;
+
+      .login-card {
+        max-width:
+          430px;
       }
 
     }
@@ -785,60 +1032,82 @@
 
     @media (max-width: 480px) {
 
-      .content-panel {
-        padding: 16px;
+      .login-panel {
+        padding:
+          16px;
 
-        align-items: center;
+        align-items:
+          center;
       }
 
-      .content-card {
-        padding: 31px 22px 25px;
 
-        border-radius: 18px;
+      .login-card {
+        padding:
+          31px 22px 25px;
+
+        border-radius:
+          18px;
 
         box-shadow:
-          0 18px 45px rgba(3, 15, 32, 0.08);
+          0 18px 45px
+          rgba(3, 15, 32, 0.08);
       }
+
 
       .mobile-logo {
-        margin-bottom: 29px;
+        margin-bottom:
+          29px;
       }
 
-      .content-card h1 {
-        font-size: 28px;
+
+      .login-card h1 {
+        font-size:
+          28px;
       }
 
-      .floating-button {
-        width: 54px;
-        height: 54px;
 
-        right: 18px;
+      .contact-buttons {
+        right:
+          18px;
+
+        bottom:
+          18px;
+
+        gap:
+          9px;
       }
 
-      .floating-button svg {
-        width: 27px;
-        height: 27px;
+
+      .contact-button {
+        width:
+          52px;
+
+        height:
+          52px;
       }
 
-      .email-button {
-        bottom: 158px;
+
+      .contact-button svg {
+        width:
+          26px;
+
+        height:
+          26px;
       }
 
-      .whatsapp-button {
-        bottom: 88px;
-      }
-
-      .telegram-button {
-        bottom: 18px;
-      }
 
       .toast {
-        left: 16px;
-        right: 16px;
+        left:
+          16px;
 
-        bottom: 86px;
+        right:
+          16px;
 
-        min-width: 0;
+        bottom:
+          16px;
+
+        min-width:
+          0;
       }
 
     }
@@ -855,10 +1124,11 @@
 
 
     <!-- =========================
-         BRAND PANEL
+         DESKTOP BRAND PANEL
     ========================== -->
 
     <section class="brand-panel">
+
 
       <div class="brand-logo">
 
@@ -874,18 +1144,26 @@
       <div class="brand-content">
 
         <div class="eyebrow">
-          Gestión Patrimonial
+          Wealth Management
         </div>
 
+
         <h2>
+
           Gestión patrimonial
-          <strong>con visión.</strong>
+
+          <strong>
+            con visión.
+          </strong>
+
         </h2>
+
 
         <p class="brand-description">
 
-          Obtén información y asistencia de forma
-          sencilla, clara y desde cualquier dispositivo.
+          Accede a tu espacio financiero y gestiona
+          tu información de forma sencilla, segura
+          y desde cualquier dispositivo.
 
         </p>
 
@@ -899,24 +1177,24 @@
         </div>
 
         <span>
-          Información y atención de forma segura
+          Conexión protegida y acceso seguro
         </span>
 
       </div>
+
 
     </section>
 
 
     <!-- =========================
-         CONTACT PANEL
+         LOGIN PANEL
     ========================== -->
 
-    <section class="content-panel">
-
-      <div class="content-card">
+    <section class="login-panel">
 
 
-        <!-- MOBILE LOGO -->
+      <div class="login-card">
+
 
         <div class="mobile-logo">
 
@@ -930,139 +1208,118 @@
 
 
         <h1>
-          Contáctanos
+          Bienvenido de nuevo
         </h1>
 
 
-        <p class="content-subtitle">
-          Selecciona tu canal de contacto preferido.
+        <p class="login-subtitle">
+          Introduce tus datos para acceder a tu espacio.
         </p>
 
 
-        <!-- CONTACT OPTIONS -->
-
-        <div class="contact-list">
+        <form id="loginForm">
 
 
-          <!-- EMAIL -->
+          <!-- USERNAME -->
 
-          <a
-            href="mailto:BASECasaDeBolsaMX@gmail.com"
-            class="contact-card"
-            aria-label="Enviar un correo electrónico"
-          >
+          <div class="field">
 
-            <div class="contact-icon email-icon">
+            <label for="username">
+              Teléfono o usuario
+            </label>
 
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
+
+            <div class="input-wrap">
+
+              <input
+                type="text"
+                id="username"
+                name="username"
+                autocomplete="username"
+                placeholder="Introduce tu teléfono o usuario"
+                minlength="9"
               >
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
 
             </div>
 
-            <div class="contact-info">
+          </div>
 
-              <div class="contact-title">
-                Correo electrónico
-              </div>
 
-              <div class="contact-description">
-                Envíanos un mensaje por correo electrónico.
-              </div>
+          <!-- PASSWORD -->
+
+          <div class="field">
+
+            <label for="password">
+              Contraseña
+            </label>
+
+
+            <div class="input-wrap">
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="password-input"
+                autocomplete="current-password"
+                placeholder="Introduce tu contraseña"
+                minlength="3"
+              >
+
+
+              <button
+                type="button"
+                class="toggle-password"
+                id="togglePassword"
+              >
+                Mostrar
+              </button>
 
             </div>
 
-          </a>
+          </div>
 
 
-          <!-- WHATSAPP -->
+          <!-- FORGOT PASSWORD -->
+
+          <div class="form-row">
+
+            <a
+              href="#"
+              class="forgot"
+              id="forgotPassword"
+            >
+              ¿Olvidaste tu contraseña?
+            </a>
+
+          </div>
+
+
+          <!-- LOGIN -->
 
           <button
-            type="button"
-            class="contact-card"
-            id="whatsappCard"
-            aria-label="Información sobre WhatsApp"
+            type="submit"
+            class="login-button"
+            id="loginButton"
           >
 
-            <div class="contact-icon whatsapp-icon">
+            <span class="button-text">
+              Iniciar sesión
+            </span>
 
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M12 2a9.9 9.9 0 0 0-8.6 14.8L2 22l5.4-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1 1 12 20zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.3-.6-.2-.2.1-.6.8-.7 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3.1-2.5-.2-.3.2-.3.5-1 .2-.2.2-.4.1-.6 0-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.6 1 2.6.7 3.1.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.1-.5-.2z"/>
-              </svg>
-
-            </div>
-
-            <div class="contact-info">
-
-              <div class="contact-title">
-                WhatsApp
-              </div>
-
-              <div class="contact-description">
-                Servicio de atención temporalmente suspendido.
-              </div>
-
-            </div>
+            <span class="spinner"></span>
 
           </button>
 
 
-          <!-- TELEGRAM -->
-
-          <a
-            href="https://t.me/BASE_CasaDeBolsaMX"
-            class="contact-card"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contactar por Telegram"
-          >
-
-            <div class="contact-icon telegram-icon">
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M21.4 3.6L18.2 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.3-1.1-1 .2-1.5L20 3.2c.9-.3 1.7.2 1.4.4z"/>
-              </svg>
-
-            </div>
-
-            <div class="contact-info">
-
-              <div class="contact-title">
-                Telegram
-              </div>
-
-              <div class="contact-description">
-                Contacta con nosotros a través de Telegram.
-              </div>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
-
-        <div class="notice">
-          Para consultas, información o asistencia, utiliza uno de
-          nuestros canales de contacto disponibles.
-        </div>
+        </form>
 
 
         <div class="secure-note">
 
           <span class="secure-dot"></span>
 
-          Atención disponible de forma segura
+          Conexión segura protegida
 
         </div>
 
@@ -1075,69 +1332,79 @@
 
 
   <!-- =========================
-       FLOATING EMAIL
+       CONTACT BUTTONS
   ========================== -->
 
-  <a
-    href="mailto:BASECasaDeBolsaMX@gmail.com"
-    class="floating-button email-button"
-    aria-label="Enviar correo electrónico"
-    title="Correo electrónico"
-  >
+  <div class="contact-buttons">
 
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
+
+    <!-- TELEGRAM -->
+
+    <a
+      href="https://t.me/BASE_CasaDeBolsaMX"
+      class="contact-button telegram-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por Telegram"
+      title="Telegram"
     >
-      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-    </svg>
 
-  </a>
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+
+        <path d="M21.4 3.6L18.2 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.3-1.1-1 .2-1.5L20 3.2c.9-.3 1.7.2 1.4.4z"/>
+
+      </svg>
+
+    </a>
 
 
-  <!-- =========================
-       FLOATING WHATSAPP
-  ========================== -->
+    <!-- EMAIL -->
 
-  <button
-    type="button"
-    class="floating-button whatsapp-button"
-    id="whatsappButton"
-    aria-label="WhatsApp temporalmente suspendido"
-    title="WhatsApp temporalmente suspendido"
-  >
-
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
+    <a
+      href="mailto:BASECasaDeBolsaMX@gmail.com"
+      class="contact-button email-button"
+      aria-label="Enviar correo electrónico"
+      title="Correo electrónico"
     >
-      <path d="M12 2a9.9 9.9 0 0 0-8.6 14.8L2 22l5.4-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1 1 12 20zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3.1-2.5-.2-.3.2-.3.5-1 .2-.2.2-.4.1-.6 0-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.6 1 2.6.7 3.1.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.1-.5-.2z"/>
-    </svg>
 
-  </button>
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+
+      </svg>
+
+    </a>
 
 
-  <!-- =========================
-       FLOATING TELEGRAM
-  ========================== -->
+    <!-- WHATSAPP -->
 
-  <a
-    href="https://t.me/BASE_CasaDeBolsaMX"
-    class="floating-button telegram-button"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar por Telegram"
-    title="Telegram"
-  >
-
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
+    <button
+      type="button"
+      class="contact-button whatsapp-button"
+      id="whatsappButton"
+      aria-label="WhatsApp"
+      title="WhatsApp"
     >
-      <path d="M21.4 3.6L18.2 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.3-1.1-1 .2-1.5L20 3.2c.9-.3 1.7.2 1.4.4z"/>
-    </svg>
 
-  </a>
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+
+        <path d="M12.04 2C6.54 2 2.07 6.47 2.07 11.97c0 1.76.46 3.48 1.34 5L2 22l5.18-1.36a9.93 9.93 0 0 0 4.86 1.27h.01c5.49 0 9.96-4.47 9.96-9.97C22.01 6.47 17.54 2 12.04 2zm5.79 14.32c-.24.68-1.4 1.3-1.92 1.35-.49.05-1.11.07-1.79-.11-.41-.11-.94-.3-1.62-.59-2.84-1.23-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.38.26-.29.57-.36.76-.36.19 0 .38 0 .54.01.17.01.41-.07.64.49.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.32-.29.49-.14.17-.3.38-.43.51-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.93 1.06.94 1.96 1.23 2.24 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.29.37-.24.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.54.33.07.12.07.7-.17 1.38z"/>
+
+      </svg>
+
+    </button>
+
+
+  </div>
 
 
   <!-- =========================
@@ -1155,20 +1422,22 @@
       !
     </div>
 
+
     <div>
 
       <div
         class="toast-title"
         id="toastTitle"
       >
-        WhatsApp temporalmente suspendido
+        Acceso no disponible
       </div>
+
 
       <div
         class="toast-message"
         id="toastMessage"
       >
-        Por el momento, el servicio de atención por WhatsApp se encuentra temporalmente suspendido. Por favor, contáctenos por correo electrónico.
+        No se pudo completar la solicitud.
       </div>
 
     </div>
@@ -1178,81 +1447,305 @@
 
   <script>
 
+
     /* =========================
        ELEMENTS
-    ========================== */
+    ========================= */
+
+    const form =
+      document.getElementById(
+        "loginForm"
+      );
+
+
+    const username =
+      document.getElementById(
+        "username"
+      );
+
+
+    const password =
+      document.getElementById(
+        "password"
+      );
+
+
+    const togglePassword =
+      document.getElementById(
+        "togglePassword"
+      );
+
+
+    const loginButton =
+      document.getElementById(
+        "loginButton"
+      );
+
 
     const toast =
-      document.getElementById("toast");
+      document.getElementById(
+        "toast"
+      );
+
 
     const toastTitle =
-      document.getElementById("toastTitle");
+      document.getElementById(
+        "toastTitle"
+      );
+
 
     const toastMessage =
-      document.getElementById("toastMessage");
+      document.getElementById(
+        "toastMessage"
+      );
+
 
     const whatsappButton =
-      document.getElementById("whatsappButton");
+      document.getElementById(
+        "whatsappButton"
+      );
 
-    const whatsappCard =
-      document.getElementById("whatsappCard");
 
     let toastTimer;
 
 
     /* =========================
+       PASSWORD SHOW / HIDE
+    ========================= */
+
+    togglePassword.addEventListener(
+      "click",
+      () => {
+
+        const isPassword =
+          password.type ===
+          "password";
+
+
+        password.type =
+          isPassword
+            ? "text"
+            : "password";
+
+
+        togglePassword.textContent =
+          isPassword
+            ? "Ocultar"
+            : "Mostrar";
+
+      }
+    );
+
+
+    /* =========================
        TOAST
-    ========================== */
+    ========================= */
 
-    function showToast(title, message) {
+    function showToast(
+      title,
+      message
+    ) {
 
-      toastTitle.textContent = title;
+      toastTitle.textContent =
+        title;
 
-      toastMessage.textContent = message;
 
-      toast.classList.add("show");
+      toastMessage.textContent =
+        message;
 
-      clearTimeout(toastTimer);
 
-      toastTimer = setTimeout(
-        () => {
-
-          toast.classList.remove("show");
-
-        },
-        5000
+      toast.classList.add(
+        "show"
       );
+
+
+      clearTimeout(
+        toastTimer
+      );
+
+
+      toastTimer =
+        setTimeout(
+          () => {
+
+            toast.classList.remove(
+              "show"
+            );
+
+          },
+          4500
+        );
 
     }
 
 
     /* =========================
-       WHATSAPP
-    ========================== */
+       CLEAR ERROR
+    ========================= */
 
-    function whatsappSuspended() {
+    username.addEventListener(
+      "input",
+      () => {
 
-      showToast(
-        "WhatsApp temporalmente suspendido",
-        "Por el momento, el servicio de atención por WhatsApp se encuentra temporalmente suspendido. Por favor, contáctenos por correo electrónico."
+        username.classList.remove(
+          "input-error"
+        );
+
+      }
+    );
+
+
+    password.addEventListener(
+      "input",
+      () => {
+
+        password.classList.remove(
+          "input-error"
+        );
+
+      }
+    );
+
+
+    /* =========================
+       LOGIN VALIDATION
+    ========================= */
+
+    form.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+
+        const usernameValue =
+          username.value.trim();
+
+
+        const passwordValue =
+          password.value;
+
+
+        /* USERNAME */
+
+        if (
+          usernameValue.length < 9
+        ) {
+
+          username.classList.add(
+            "input-error"
+          );
+
+
+          showToast(
+            "Datos incompletos",
+            "Introduce un teléfono o número de cuenta de al menos 9 caracteres."
+          );
+
+
+          username.focus();
+
+
+          return;
+
+        }
+
+
+        /* PASSWORD */
+
+        if (
+          passwordValue.length < 3
+        ) {
+
+          password.classList.add(
+            "input-error"
+          );
+
+
+          showToast(
+            "Datos incompletos",
+            "Introduce una contraseña de al menos 3 caracteres."
+          );
+
+
+          password.focus();
+
+
+          return;
+
+        }
+
+
+        /* VALIDATION PASSED */
+
+        loginButton.classList.add(
+          "loading"
+        );
+
+
+        setTimeout(
+          () => {
+
+            loginButton.classList.remove(
+              "loading"
+            );
+
+
+            showToast(
+              "Acceso no disponible",
+              "No se pudo completar el inicio de sesión debido a restricciones de red."
+            );
+
+          },
+          1100
+        );
+
+      }
+    );
+
+
+    /* =========================
+       FORGOT PASSWORD
+    ========================= */
+
+    document
+      .getElementById(
+        "forgotPassword"
+      )
+      .addEventListener(
+        "click",
+        (event) => {
+
+          event.preventDefault();
+
+
+          showToast(
+            "Recuperación de acceso",
+            "请联系官方人员处理"
+          );
+
+        }
       );
 
-    }
 
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     whatsappButton.addEventListener(
       "click",
-      whatsappSuspended
+      () => {
+
+        showToast(
+          "WhatsApp",
+          "暂时暂停WhatsApp处理业务"
+        );
+
+      }
     );
 
-
-    whatsappCard.addEventListener(
-      "click",
-      whatsappSuspended
-    );
 
   </script>
-
 
 </body>
 
