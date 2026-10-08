@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BASEMAXPRO | Wealth Management</title>
+  <title>BASEMAXPRO | Gestión Patrimonial</title>
 
   <style>
     * {
@@ -37,70 +37,40 @@
       position: relative;
     }
 
-    /* ========================================
-       LEFT BRAND PANEL
-    ======================================== */
-
+    /* PANEL DE MARCA */
     .brand-panel {
       width: 52%;
       min-height: 100vh;
-
       background:
-        radial-gradient(
-          circle at 20% 15%,
-          rgba(212, 175, 55, 0.10),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 85% 80%,
-          rgba(37, 99, 235, 0.12),
-          transparent 32%
-        ),
-        linear-gradient(
-          135deg,
-          #060a13 0%,
-          #0c1425 52%,
-          #080e1b 100%
-        );
-
+        radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.10), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(37, 99, 235, 0.12), transparent 32%),
+        linear-gradient(135deg, #060a13 0%, #0c1425 52%, #080e1b 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-
       padding: 60px;
-
       position: relative;
       overflow: hidden;
     }
 
     .brand-panel::before {
       content: "";
-
       position: absolute;
-
       width: 600px;
       height: 600px;
-
       border: 1px solid rgba(212, 175, 55, 0.07);
-
       border-radius: 50%;
-
       top: -280px;
       left: -250px;
     }
 
     .brand-panel::after {
       content: "";
-
       position: absolute;
-
       width: 760px;
       height: 760px;
-
       border: 1px solid rgba(255, 255, 255, 0.035);
-
       border-radius: 50%;
-
       right: -380px;
       bottom: -380px;
     }
@@ -108,23 +78,16 @@
     .brand-content {
       width: 100%;
       max-width: 620px;
-
       position: relative;
       z-index: 2;
     }
 
-    /* ========================================
-       PREMIUM BASE LOGO
-    ======================================== */
-
+    /* LOGOTIPO PREMIUM DE BASE */
     .premium-logo {
       width: 112px;
       height: 112px;
-
       position: relative;
-
       margin-bottom: 34px;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,14 +95,10 @@
 
     .logo-diamond {
       position: absolute;
-
       width: 82px;
       height: 82px;
-
       transform: rotate(45deg);
-
       border: 1px solid rgba(212, 175, 55, 0.72);
-
       box-shadow:
         0 0 18px rgba(212, 175, 55, 0.08),
         inset 0 0 18px rgba(212, 175, 55, 0.03);
@@ -147,122 +106,82 @@
 
     .logo-diamond-inner {
       position: absolute;
-
       width: 62px;
       height: 62px;
-
       transform: rotate(45deg);
-
       border: 1px solid rgba(243, 214, 117, 0.45);
     }
 
     .base-monogram {
       position: relative;
-
       z-index: 3;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 47px;
-
       line-height: 1;
-
       font-weight: 700;
-
       letter-spacing: -5px;
-
       color: var(--gold-light);
-
       text-shadow:
         0 0 8px rgba(212, 175, 55, 0.25),
         0 2px 10px rgba(0, 0, 0, 0.55);
-
       transform: scaleX(0.95);
     }
 
     .base-monogram::after {
       content: "";
-
       position: absolute;
-
       width: 48px;
       height: 1px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--gold),
-          transparent
-        );
-
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
       left: 4px;
       bottom: -11px;
     }
 
     .logo-corner {
       position: absolute;
-
       width: 7px;
       height: 7px;
-
       border-color: var(--gold);
-
       border-style: solid;
-
       opacity: 0.85;
     }
 
     .logo-corner.tl {
       top: 11px;
       left: 11px;
-
-      border-width:
-        1px 0 0 1px;
+      border-width: 1px 0 0 1px;
     }
 
     .logo-corner.tr {
       top: 11px;
       right: 11px;
-
-      border-width:
-        1px 1px 0 0;
+      border-width: 1px 1px 0 0;
     }
 
     .logo-corner.bl {
       bottom: 11px;
       left: 11px;
-
-      border-width:
-        0 0 1px 1px;
+      border-width: 0 0 1px 1px;
     }
 
     .logo-corner.br {
       bottom: 11px;
       right: 11px;
-
-      border-width:
-        0 1px 1px 0;
+      border-width: 0 1px 1px 0;
     }
 
-    /* ========================================
-       BRAND TEXT
-    ======================================== */
-
+    /* TEXTO DE MARCA */
     .brand-logo {
       font-size: clamp(46px, 7vw, 88px);
-
       font-weight: 900;
-
       letter-spacing: -5px;
-
       line-height: 0.95;
-
       color: #ffffff;
-
       margin-bottom: 22px;
     }
 
@@ -273,60 +192,41 @@
     .brand-line {
       width: 92px;
       height: 3px;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--gold-dark),
-          var(--gold-light),
-          transparent
-        );
-
+      background: linear-gradient(
+        90deg,
+        var(--gold-dark),
+        var(--gold-light),
+        transparent
+      );
       border-radius: 20px;
-
       margin-bottom: 28px;
     }
 
     .brand-subtitle {
       font-size: 16px;
-
       color: var(--gold-light);
-
       letter-spacing: 5px;
-
       text-transform: uppercase;
-
       margin-bottom: 32px;
-
       font-weight: 500;
     }
 
     .brand-description {
       max-width: 520px;
-
       font-size: 16px;
-
       line-height: 1.85;
-
       color: #cbd5e1;
     }
 
-    /* ========================================
-       LOGIN PANEL
-    ======================================== */
-
+    /* PANEL DE INICIO DE SESIÓN */
     .login-panel {
       width: 48%;
       min-height: 100vh;
-
       background: #f8fafc;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       padding: 40px;
-
       color: #0f172a;
     }
 
@@ -341,39 +241,27 @@
 
     .login-header h1 {
       font-size: 34px;
-
       font-weight: 800;
-
       color: #0f172a;
-
       margin-bottom: 10px;
     }
 
     .login-header p {
       color: #64748b;
-
       font-size: 15px;
-
       line-height: 1.6;
     }
 
-    /* ========================================
-       FORM
-    ======================================== */
-
+    /* FORMULARIO */
     .form-group {
       margin-bottom: 20px;
     }
 
     .form-label {
       display: block;
-
       margin-bottom: 8px;
-
       font-size: 14px;
-
       font-weight: 700;
-
       color: #334155;
     }
 
@@ -384,97 +272,65 @@
     .form-input {
       width: 100%;
       height: 54px;
-
       border: 1px solid #cbd5e1;
-
       border-radius: 12px;
-
       padding: 0 16px;
-
       font-size: 15px;
-
       outline: none;
-
       background: #ffffff;
-
       color: #0f172a;
-
       transition: all 0.2s ease;
     }
 
     .form-input:focus {
       border-color: #3b82f6;
-
-      box-shadow:
-        0 0 0 4px rgba(59, 130, 246, 0.10);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.10);
     }
 
     .form-input.input-error {
       border-color: #ef4444;
-
-      box-shadow:
-        0 0 0 3px rgba(239, 68, 68, 0.08);
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
     }
 
     .password-input {
       padding-right: 54px;
     }
 
+    /* MOSTRAR / OCULTAR CONTRASEÑA */
     .toggle-password {
       position: absolute;
-
       right: 14px;
       top: 50%;
-
       transform: translateY(-50%);
-
       border: none;
-
       background: transparent;
-
       cursor: pointer;
-
       color: #64748b;
-
       font-size: 18px;
-
       width: 32px;
       height: 32px;
-
       border-radius: 8px;
     }
 
     .toggle-password:hover {
       background: #f1f5f9;
-
       color: #334155;
     }
 
-    /* ========================================
-       FORGOT PASSWORD
-    ======================================== */
-
+    /* CONTRASEÑA OLVIDADA */
     .forgot-row {
       display: flex;
-
       justify-content: flex-end;
-
       margin-top: -8px;
-
       margin-bottom: 22px;
     }
 
     .forgot-password {
       border: none;
-
       background: transparent;
-
       color: #2563eb;
-
       font-size: 14px;
-
       cursor: pointer;
-
       font-weight: 600;
     }
 
@@ -482,49 +338,27 @@
       text-decoration: underline;
     }
 
-    /* ========================================
-       LOGIN BUTTON
-    ======================================== */
-
+    /* BOTÓN DE INICIO DE SESIÓN */
     .login-button {
       width: 100%;
       height: 56px;
-
       border: none;
-
       border-radius: 12px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2563eb,
-          #1d4ed8
-        );
-
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: #ffffff;
-
       font-size: 16px;
-
       font-weight: 800;
-
       cursor: pointer;
-
       transition: all 0.2s ease;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 10px;
     }
 
     .login-button:hover {
       transform: translateY(-1px);
-
-      box-shadow:
-        0 10px 24px rgba(37, 99, 235, 0.25);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
     }
 
     .login-button:active {
@@ -533,7 +367,6 @@
 
     .login-button.loading {
       cursor: wait;
-
       opacity: 0.85;
     }
 
@@ -544,17 +377,10 @@
     .spinner {
       width: 18px;
       height: 18px;
-
-      border:
-        2px solid rgba(255, 255, 255, 0.35);
-
+      border: 2px solid rgba(255, 255, 255, 0.35);
       border-top-color: #ffffff;
-
       border-radius: 50%;
-
-      animation:
-        spin 0.8s linear infinite;
-
+      animation: spin 0.8s linear infinite;
       display: none;
     }
 
@@ -572,97 +398,57 @@
       }
     }
 
-    /* ========================================
-       FOOTER
-    ======================================== */
-
+    /* PIE DE PÁGINA */
     .login-footer {
       text-align: center;
-
       margin-top: 24px;
-
       color: #94a3b8;
-
       font-size: 12px;
-
       line-height: 1.6;
     }
 
-    /* ========================================
-       FLOATING BUTTONS
-    ======================================== */
-
+    /* BOTONES FLOTANTES */
     .contact-buttons {
       position: fixed;
-
       right: 22px;
       bottom: 22px;
-
       display: flex;
-
       flex-direction: column;
-
       gap: 12px;
-
       z-index: 9999;
     }
 
     .contact-button {
       width: 58px;
       height: 58px;
-
       border-radius: 50%;
-
       border: none;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       cursor: pointer;
-
       text-decoration: none;
-
-      box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.25);
-
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
     }
 
     .contact-button:hover {
-      transform:
-        translateY(-3px)
-        scale(1.04);
-
-      box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.30);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
     }
 
     .contact-button svg {
       width: 29px;
       height: 29px;
-
       fill: #ffffff;
     }
 
-    /* ========================================
-       CNBV
-    ======================================== */
-
+    /* CNBV */
     .cnbv-button {
-      background:
-        linear-gradient(
-          145deg,
-          #f2f4f7,
-          #d7dce3
-        );
-
-      border:
-        2px solid rgba(255, 255, 255, 0.9);
-
+      background: linear-gradient(145deg, #f2f4f7, #d7dce3);
+      border: 2px solid rgba(255, 255, 255, 0.9);
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.28),
         inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -677,103 +463,61 @@
     .cnbv-logo {
       width: 40px;
       height: 40px;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       position: relative;
     }
 
     .cnbv-emblem {
       width: 31px;
       height: 31px;
-
-      border:
-        2px solid #183b68;
-
+      border: 2px solid #183b68;
       border-radius: 50%;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       position: relative;
     }
 
     .cnbv-emblem::before {
       content: "";
-
       position: absolute;
-
       width: 16px;
       height: 16px;
-
-      border:
-        2px solid #183b68;
-
+      border: 2px solid #183b68;
       transform: rotate(45deg);
-
       border-radius: 2px;
     }
 
     .cnbv-emblem::after {
       content: "MX";
-
       position: absolute;
-
       font-size: 6px;
-
       font-weight: 900;
-
       color: #183b68;
-
       background: #e7ebf0;
-
       padding: 1px 2px;
-
       letter-spacing: 0.5px;
     }
 
     .cnbv-text {
       position: absolute;
-
       bottom: -1px;
-
       font-size: 5px;
-
       line-height: 1;
-
       font-weight: 900;
-
       color: #183b68;
-
       letter-spacing: 0.3px;
-
       background: #e7ebf0;
-
       padding: 0 2px;
     }
 
-    /* ========================================
-       BINANCE
-    ======================================== */
-
+    /* BINANCE */
     .binance-button {
-      background:
-        linear-gradient(
-          145deg,
-          #f8d33a,
-          #f0b90b
-        );
-
+      background: linear-gradient(145deg, #f8d33a, #f0b90b);
       color: #111111;
-
-      border:
-        2px solid rgba(255, 255, 255, 0.75);
-
+      border: 2px solid rgba(255, 255, 255, 0.75);
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.28),
         inset 0 1px 0 rgba(255, 255, 255, 0.55);
@@ -788,23 +532,17 @@
     .binance-logo {
       width: 32px;
       height: 32px;
-
       position: relative;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
     }
 
     .binance-diamond {
       position: absolute;
-
       width: 9px;
       height: 9px;
-
       background: #111111;
-
       transform: rotate(45deg);
     }
 
@@ -827,26 +565,18 @@
     .binance-diamond.center {
       width: 8px;
       height: 8px;
-
       background: #111111;
     }
 
-    /* ========================================
-       NASDAQ
-    ======================================== */
-
+    /* NASDAQ */
     .nasdaq-button {
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff 0%,
-          #e7edf5 48%,
-          #cbd5e1 100%
-        );
-
-      border:
-        2px solid rgba(255, 255, 255, 0.95);
-
+      background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #e7edf5 48%,
+        #cbd5e1 100%
+      );
+      border: 2px solid rgba(255, 255, 255, 0.95);
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.30),
         inset 0 1px 0 rgba(255, 255, 255, 1);
@@ -861,42 +591,26 @@
     .nasdaq-logo {
       width: 47px;
       height: 40px;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
       justify-content: center;
-
       position: relative;
     }
 
     .nasdaq-mark {
       position: relative;
-
       width: 31px;
       height: 19px;
-
       margin-bottom: 2px;
     }
 
     .nasdaq-mark span {
       position: absolute;
-
       bottom: 0;
-
       width: 4px;
-
-      border-radius:
-        3px 3px 1px 1px;
-
-      background:
-        linear-gradient(
-          180deg,
-          #0072ce,
-          #003b73
-        );
+      border-radius: 3px 3px 1px 1px;
+      background: linear-gradient(180deg, #0072ce, #003b73);
     }
 
     .nasdaq-mark .bar1 {
@@ -925,38 +639,23 @@
     }
 
     .nasdaq-word {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 7px;
-
       font-weight: 900;
-
       letter-spacing: 1px;
-
       color: #123c68;
-
       line-height: 1;
     }
 
-    /* ========================================
-       TRADINGVIEW
-    ======================================== */
-
+    /* TRADINGVIEW */
     .tradingview-button {
-      background:
-        linear-gradient(
-          145deg,
-          #1f2937 0%,
-          #111827 55%,
-          #030712 100%
-        );
-
-      border:
-        2px solid rgba(255, 255, 255, 0.18);
-
+      background: linear-gradient(
+        145deg,
+        #1f2937 0%,
+        #111827 55%,
+        #030712 100%
+      );
+      border: 2px solid rgba(255, 255, 255, 0.18);
       box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.38),
         inset 0 1px 0 rgba(255, 255, 255, 0.10);
@@ -972,194 +671,115 @@
     .tradingview-logo {
       width: 48px;
       height: 42px;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
       justify-content: center;
-
       position: relative;
     }
 
     .tv-chart {
       width: 35px;
       height: 22px;
-
       position: relative;
-
       margin-bottom: 1px;
     }
 
     .tv-chart::before {
       content: "";
-
       position: absolute;
-
       left: 1px;
       bottom: 3px;
-
       width: 29px;
       height: 13px;
-
-      border-left:
-        3px solid #42a5ff;
-
-      border-bottom:
-        3px solid #42a5ff;
-
-      transform:
-        skewY(-24deg)
-        rotate(-1deg);
-
+      border-left: 3px solid #42a5ff;
+      border-bottom: 3px solid #42a5ff;
+      transform: skewY(-24deg) rotate(-1deg);
       opacity: 0.95;
     }
 
     .tv-chart::after {
       content: "";
-
       position: absolute;
-
       left: 9px;
       top: 5px;
-
       width: 20px;
       height: 10px;
-
-      border-top:
-        3px solid #7dc4ff;
-
-      border-right:
-        3px solid #7dc4ff;
-
-      transform:
-        skewY(-27deg)
-        rotate(-8deg);
+      border-top: 3px solid #7dc4ff;
+      border-right: 3px solid #7dc4ff;
+      transform: skewY(-27deg) rotate(-8deg);
     }
 
     .tv-word {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 6px;
-
       font-weight: 900;
-
       letter-spacing: 0.7px;
-
       color: #ffffff;
-
       line-height: 1;
     }
 
-    /* ========================================
-       TELEGRAM
-    ======================================== */
-
+    /* TELEGRAM */
     .telegram-button {
       background: #229ed9;
     }
 
-    /* ========================================
-       EMAIL
-    ======================================== */
-
+    /* CORREO ELECTRÓNICO */
     .email-button {
       background: #2563eb;
     }
 
-    /* ========================================
-       WHATSAPP
-    ======================================== */
-
+    /* WHATSAPP */
     .whatsapp-button {
       background: #25d366;
     }
 
-    /* ========================================
-       TOAST
-    ======================================== */
-
+    /* NOTIFICACIÓN */
     .toast {
       position: fixed;
-
       left: 50%;
       bottom: 32px;
-
-      transform:
-        translateX(-50%)
-        translateY(30px);
-
+      transform: translateX(-50%) translateY(30px);
       min-width: 300px;
-
-      max-width:
-        calc(100vw - 40px);
-
-      background:
-        rgba(15, 23, 42, 0.96);
-
+      max-width: calc(100vw - 40px);
+      background: rgba(15, 23, 42, 0.96);
       color: #ffffff;
-
       padding: 16px 20px;
-
       border-radius: 12px;
-
-      box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.30);
-
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.30);
       opacity: 0;
-
       pointer-events: none;
-
       transition: all 0.3s ease;
-
       z-index: 10000;
-
       text-align: center;
     }
 
     .toast.show {
       opacity: 1;
-
-      transform:
-        translateX(-50%)
-        translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
 
     .toast-title {
       font-size: 14px;
-
       font-weight: 800;
-
       margin-bottom: 4px;
     }
 
     .toast-message {
       font-size: 13px;
-
       color: #cbd5e1;
-
       line-height: 1.5;
     }
 
-    /* ========================================
-       RESPONSIVE
-    ======================================== */
-
+    /* DISEÑO RESPONSIVO */
     @media (max-width: 900px) {
-
       .page {
         display: block;
       }
 
       .brand-panel {
         width: 100%;
-
         min-height: 340px;
-
         padding: 45px 30px;
       }
 
@@ -1170,7 +790,6 @@
       .premium-logo {
         width: 90px;
         height: 90px;
-
         margin-bottom: 25px;
       }
 
@@ -1202,27 +821,20 @@
 
       .login-panel {
         width: 100%;
-
-        min-height:
-          calc(100vh - 340px);
-
-        padding:
-          45px 25px 120px;
+        min-height: calc(100vh - 340px);
+        padding: 45px 25px 120px;
       }
     }
 
     @media (max-width: 480px) {
-
       .brand-panel {
         min-height: 285px;
-
         padding: 30px 22px;
       }
 
       .premium-logo {
         width: 78px;
         height: 78px;
-
         margin-bottom: 22px;
       }
 
@@ -1238,7 +850,6 @@
 
       .base-monogram {
         font-size: 33px;
-
         letter-spacing: -4px;
       }
 
@@ -1249,22 +860,17 @@
 
       .brand-logo {
         font-size: 45px;
-
         letter-spacing: -2px;
       }
 
       .brand-subtitle {
         font-size: 11px;
-
         letter-spacing: 3px;
       }
 
       .login-panel {
-        min-height:
-          calc(100vh - 285px);
-
-        padding:
-          35px 20px 120px;
+        min-height: calc(100vh - 285px);
+        padding: 35px 20px 120px;
       }
 
       .login-header h1 {
@@ -1273,9 +879,7 @@
 
       .contact-buttons {
         right: 14px;
-
         bottom: 14px;
-
         gap: 9px;
       }
 
@@ -1358,20 +962,13 @@
 
   <div class="page">
 
-    <!-- ========================================
-         BRAND PANEL
-    ========================================= -->
-
+    <!-- PANEL DE MARCA -->
     <section class="brand-panel">
-
       <div class="brand-content">
 
-        <!-- Premium BASE Logo -->
-
+        <!-- Logotipo premium de BASE -->
         <div class="premium-logo">
-
           <div class="logo-diamond"></div>
-
           <div class="logo-diamond-inner"></div>
 
           <div class="logo-corner tl"></div>
@@ -1379,10 +976,7 @@
           <div class="logo-corner bl"></div>
           <div class="logo-corner br"></div>
 
-          <div class="base-monogram">
-            BASE
-          </div>
-
+          <div class="base-monogram">BASE</div>
         </div>
 
         <div class="brand-line"></div>
@@ -1392,47 +986,34 @@
         </div>
 
         <div class="brand-subtitle">
-          Wealth Management
+          Gestión Patrimonial
         </div>
 
         <p class="brand-description">
-          Soluciones profesionales para la gestión y administración
-          de patrimonio. Accede a tu cuenta para continuar.
+          Soluciones profesionales para la gestión y administración de
+          patrimonio. Accede a tu cuenta para continuar.
         </p>
 
       </div>
-
     </section>
 
-
-    <!-- ========================================
-         LOGIN PANEL
-    ========================================= -->
-
+    <!-- PANEL DE INICIO DE SESIÓN -->
     <section class="login-panel">
-
       <div class="login-card">
 
         <div class="login-header">
-
-          <h1>
-            Iniciar sesión
-          </h1>
+          <h1>Iniciar sesión</h1>
 
           <p>
             Introduce tu teléfono o número de cuenta y tu contraseña
             para acceder.
           </p>
-
         </div>
-
 
         <form id="loginForm">
 
-          <!-- USERNAME -->
-
+          <!-- Usuario -->
           <div class="form-group">
-
             <label
               class="form-label"
               for="username"
@@ -1441,7 +1022,6 @@
             </label>
 
             <div class="input-wrapper">
-
               <input
                 id="username"
                 name="username"
@@ -1451,16 +1031,11 @@
                 minlength="9"
                 autocomplete="username"
               />
-
             </div>
-
           </div>
 
-
-          <!-- PASSWORD -->
-
+          <!-- Contraseña -->
           <div class="form-group">
-
             <label
               class="form-label"
               for="password"
@@ -1469,7 +1044,6 @@
             </label>
 
             <div class="input-wrapper">
-
               <input
                 id="password"
                 name="password"
@@ -1485,19 +1059,15 @@
                 class="toggle-password"
                 id="togglePassword"
                 aria-label="Mostrar contraseña"
+                title="Mostrar contraseña"
               >
                 👁
               </button>
-
             </div>
-
           </div>
 
-
-          <!-- FORGOT PASSWORD -->
-
+          <!-- Contraseña olvidada -->
           <div class="forgot-row">
-
             <button
               type="button"
               class="forgot-password"
@@ -1505,51 +1075,40 @@
             >
               ¿Olvidaste tu contraseña?
             </button>
-
           </div>
 
-
-          <!-- LOGIN -->
-
+          <!-- Botón de inicio de sesión -->
           <button
             type="submit"
             class="login-button"
             id="loginButton"
           >
-
             <span class="button-text">
               Iniciar sesión
             </span>
 
-            <span class="spinner"></span>
-
+            <span
+              class="spinner"
+              aria-hidden="true"
+            ></span>
           </button>
 
         </form>
-
 
         <div class="login-footer">
           © 2026 BASEMAXPRO. Todos los derechos reservados.
         </div>
 
       </div>
-
     </section>
 
   </div>
 
-
-  <!-- ========================================
-       FLOATING BUTTONS
-  ========================================= -->
+  <!-- BOTONES FLOTANTES -->
 
   <div class="contact-buttons">
 
-
-    <!-- ======================================
-         CNBV
-    ======================================= -->
-
+    <!-- CNBV -->
     <a
       href="https://www.cnbv.gob.mx/paginas/busquedaentidades.aspx"
       class="contact-button cnbv-button"
@@ -1558,24 +1117,13 @@
       aria-label="Consultar CNBV"
       title="CNBV - Buscar entidades"
     >
-
       <div class="cnbv-logo">
-
         <div class="cnbv-emblem"></div>
-
-        <div class="cnbv-text">
-          CNBV
-        </div>
-
+        <div class="cnbv-text">CNBV</div>
       </div>
-
     </a>
 
-
-    <!-- ======================================
-         BINANCE
-    ======================================= -->
-
+    <!-- BINANCE -->
     <a
       href="https://accounts.binance.bh/es-MX/register?ref=48488446&gad_source=1&gad_campaignid=22139133298&gclid=EAIaIQobChMIoZqrkI-qlwMVpVwPAh325CaqEAAYASAAEgLnZvD_BwE"
       class="contact-button binance-button"
@@ -1584,28 +1132,16 @@
       aria-label="Registrarse en Binance"
       title="Binance"
     >
-
       <div class="binance-logo">
-
         <div class="binance-diamond top"></div>
-
         <div class="binance-diamond left"></div>
-
         <div class="binance-diamond right"></div>
-
         <div class="binance-diamond bottom"></div>
-
         <div class="binance-diamond center"></div>
-
       </div>
-
     </a>
 
-
-    <!-- ======================================
-         NASDAQ
-    ======================================= -->
-
+    <!-- NASDAQ -->
     <a
       href="https://www.nasdaq.com/market-activity"
       class="contact-button nasdaq-button"
@@ -1614,17 +1150,14 @@
       aria-label="Mercado Nasdaq"
       title="Nasdaq - Actividad del mercado"
     >
-
       <div class="nasdaq-logo">
 
         <div class="nasdaq-mark">
-
           <span class="bar1"></span>
           <span class="bar2"></span>
           <span class="bar3"></span>
           <span class="bar4"></span>
           <span class="bar5"></span>
-
         </div>
 
         <div class="nasdaq-word">
@@ -1632,14 +1165,9 @@
         </div>
 
       </div>
-
     </a>
 
-
-    <!-- ======================================
-         TRADINGVIEW
-    ======================================= -->
-
+    <!-- TRADINGVIEW -->
     <a
       href="https://www.tradingview.com/markets/stocks-mexico/?utm_source=chatgpt.com"
       class="contact-button tradingview-button"
@@ -1648,7 +1176,6 @@
       aria-label="Acciones de México en TradingView"
       title="TradingView - Acciones de México"
     >
-
       <div class="tradingview-logo">
 
         <div class="tv-chart"></div>
@@ -1658,14 +1185,9 @@
         </div>
 
       </div>
-
     </a>
 
-
-    <!-- ======================================
-         TELEGRAM
-    ======================================= -->
-
+    <!-- TELEGRAM -->
     <a
       href="https://t.me/BASE_CasaDeBolsaMX"
       class="contact-button telegram-button"
@@ -1674,50 +1196,30 @@
       aria-label="Contactar por Telegram"
       title="Telegram"
     >
-
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
       >
-
-        <path
-          d="M21.8 3.2c.3-1.2-.4-1.7-1.4-1.3L2.1 9.1c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.4 0l-9.7 8.8-.4 3.5-1.7-5.1-.7-.2z"
-        />
-
+        <path d="M21.5 3.5 2.7 10.8c-1.28.51-1.27 1.22-.23 1.53l4.83 1.51 1.85 5.79c.23.65.12.91.78.91.52 0 .75-.24 1.03-.52l2.49-2.42 5.18 3.82c.95.53 1.63.27 1.87-.88l3.31-15.58c.36-1.42-.54-2.06-1.48-1.46zM8.06 13.48l10.99-6.93c.55-.33 1.05-.15.64.21l-8.94 8.07-.35 3.72-1.42-4.42-3.43-1.08c-.75-.23-.77-.74.51-1.57z"/>
       </svg>
-
     </a>
 
-
-    <!-- ======================================
-         EMAIL
-    ======================================= -->
-
+    <!-- CORREO ELECTRÓNICO -->
     <a
       href="mailto:BASECasaDeBolsaMX@gmail.com"
       class="contact-button email-button"
       aria-label="Enviar correo electrónico"
       title="Correo electrónico"
     >
-
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
       >
-
-        <path
-          d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-        />
-
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
       </svg>
-
     </a>
 
-
-    <!-- ======================================
-         WHATSAPP
-    ======================================= -->
-
+    <!-- WHATSAPP -->
     <button
       type="button"
       class="contact-button whatsapp-button"
@@ -1725,32 +1227,25 @@
       aria-label="WhatsApp"
       title="WhatsApp"
     >
-
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"
       >
-
-        <path
-          d="M12.04 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.33 5.03L2 22l5.08-1.3a10 10 0 0 0 4.96 1.27h.01C17.58 21.97 22 17.47 22 12.03 22 6.5 17.58 2 12.04 2zm0 18.3c-1.55 0-3.07-.42-4.4-1.22l-.31-.18-3.02.77.81-2.94-.2-.32a8.3 8.3 0 1 1 7.12 3.89zm4.55-6.23c-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.57.12-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.36-1.7-.14-.25-.02-.38.1-.5.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.87-.2-.48-.41-.41-.57-.42h-.49c-.17 0-.45.06-.69.32-.24.25-.9.88-.9 2.14 0 1.26.92 2.47 1.05 2.64.12.17 1.8 2.76 4.37 3.87.61.26 1.09.42 1.46.54.61.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"
-        />
-
+        <path d="M12.04 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.33 5.03L2 22l5.08-1.3a10 10 0 0 0 4.96 1.27h.01C17.58 21.97 22 17.47 22 12.03 22 6.5 17.58 2 12.04 2zm0 18.3c-1.55 0-3.07-.42-4.4-1.22l-.31-.18-3.02.77.81-2.94-.2-.32a8.3 8.3 0 1 1 7.12 3.89zm4.55-6.23c-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.57.12-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.36-1.7-.14-.25-.02-.38.1-.5.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.87-.2-.48-.41-.41-.57-.42h-.49c-.17 0-.45.06-.69.32-.24.25-.9.88-.9 2.14 0 1.26.92 2.47 1.05 2.64.12.17 1.8 2.76 4.37 3.87.61.26 1.09.42 1.46.54.61.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
       </svg>
-
     </button>
 
   </div>
 
-
-  <!-- ========================================
-       TOAST
-  ========================================= -->
+  <!-- NOTIFICACIONES -->
 
   <div
     class="toast"
     id="toast"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
   >
-
     <div
       class="toast-title"
       id="toastTitle"
@@ -1760,57 +1255,25 @@
       class="toast-message"
       id="toastMessage"
     ></div>
-
   </div>
 
-
   <script>
-
-    /* =====================================
-       ELEMENTS
-    ====================================== */
-
-    const loginForm =
-      document.getElementById("loginForm");
-
-    const usernameInput =
-      document.getElementById("username");
-
-    const passwordInput =
-      document.getElementById("password");
-
-    const loginButton =
-      document.getElementById("loginButton");
-
-    const togglePassword =
-      document.getElementById("togglePassword");
-
-    const forgotPassword =
-      document.getElementById("forgotPassword");
-
-    const whatsappButton =
-      document.getElementById("whatsappButton");
-
-    const toast =
-      document.getElementById("toast");
-
-    const toastTitle =
-      document.getElementById("toastTitle");
-
-    const toastMessage =
-      document.getElementById("toastMessage");
+    const loginForm = document.getElementById("loginForm");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const loginButton = document.getElementById("loginButton");
+    const togglePassword = document.getElementById("togglePassword");
+    const forgotPassword = document.getElementById("forgotPassword");
+    const whatsappButton = document.getElementById("whatsappButton");
+    const toast = document.getElementById("toast");
+    const toastTitle = document.getElementById("toastTitle");
+    const toastMessage = document.getElementById("toastMessage");
 
     let toastTimer;
 
-
-    /* =====================================
-       TOAST
-    ====================================== */
-
+    /* Mostrar notificación */
     function showToast(title, message) {
-
       toastTitle.textContent = title;
-
       toastMessage.textContent = message;
 
       toast.classList.add("show");
@@ -1818,204 +1281,114 @@
       clearTimeout(toastTimer);
 
       toastTimer = setTimeout(() => {
-
         toast.classList.remove("show");
-
       }, 3500);
-
     }
 
+    /* Mostrar / ocultar contraseña */
+    togglePassword.addEventListener("click", () => {
+      const isPassword = passwordInput.type === "password";
 
-    /* =====================================
-       PASSWORD SHOW / HIDE
-    ====================================== */
+      passwordInput.type = isPassword
+        ? "text"
+        : "password";
 
-    togglePassword.addEventListener(
-      "click",
-      () => {
+      togglePassword.textContent = isPassword
+        ? "🙈"
+        : "👁";
 
-        const isPassword =
-          passwordInput.type === "password";
+      togglePassword.setAttribute(
+        "aria-label",
+        isPassword
+          ? "Ocultar contraseña"
+          : "Mostrar contraseña"
+      );
 
-        passwordInput.type =
-          isPassword
-            ? "text"
-            : "password";
+      togglePassword.setAttribute(
+        "title",
+        isPassword
+          ? "Ocultar contraseña"
+          : "Mostrar contraseña"
+      );
+    });
 
-        togglePassword.textContent =
-          isPassword
-            ? "🙈"
-            : "👁";
+    /* Recuperación de contraseña */
+    forgotPassword.addEventListener("click", (event) => {
+      event.preventDefault();
 
-        togglePassword.setAttribute(
-          "aria-label",
-          isPassword
-            ? "Ocultar contraseña"
-            : "Mostrar contraseña"
-        );
+      showToast(
+        "Información",
+        "Por favor, contacte con el personal oficial para gestionar su solicitud."
+      );
+    });
 
-      }
-    );
+    /* WhatsApp */
+    whatsappButton.addEventListener("click", () => {
+      showToast(
+        "WhatsApp",
+        "El servicio de WhatsApp está temporalmente suspendido."
+      );
+    });
 
+    /* Inicio de sesión */
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-    /* =====================================
-       FORGOT PASSWORD
-    ====================================== */
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value;
 
-    forgotPassword.addEventListener(
-      "click",
-      () => {
+      usernameInput.classList.remove("input-error");
+      passwordInput.classList.remove("input-error");
+
+      /* Validación del teléfono o número de cuenta */
+      if (username.length < 9) {
+        usernameInput.classList.add("input-error");
+        usernameInput.focus();
 
         showToast(
-          "Información",
-          "Por favor, contacte con el personal oficial para gestionar su solicitud."
+          "Datos incompletos",
+          "Introduce un teléfono o número de cuenta de al menos 9 caracteres."
         );
 
+        return;
       }
-    );
 
-
-    /* =====================================
-       WHATSAPP
-    ====================================== */
-
-    whatsappButton.addEventListener(
-      "click",
-      () => {
+      /* Validación de contraseña */
+      if (password.length < 3) {
+        passwordInput.classList.add("input-error");
+        passwordInput.focus();
 
         showToast(
-          "WhatsApp",
-          "El servicio de WhatsApp está temporalmente suspendido."
+          "Datos incompletos",
+          "Introduce una contraseña de al menos 3 caracteres."
         );
 
+        return;
       }
-    );
 
+      /* Estado de carga */
+      loginButton.classList.add("loading");
+      loginButton.disabled = true;
 
-    /* =====================================
-       LOGIN
-    ====================================== */
+      setTimeout(() => {
+        loginButton.classList.remove("loading");
+        loginButton.disabled = false;
 
-    loginForm.addEventListener(
-      "submit",
-      (event) => {
-
-        event.preventDefault();
-
-        const username =
-          usernameInput.value.trim();
-
-        const password =
-          passwordInput.value;
-
-
-        usernameInput.classList.remove(
-          "input-error"
+        showToast(
+          "Acceso no disponible",
+          "No se pudo completar el inicio de sesión debido a restricciones de red."
         );
+      }, 1500);
+    });
 
-        passwordInput.classList.remove(
-          "input-error"
-        );
+    /* Eliminar errores al escribir */
+    usernameInput.addEventListener("input", () => {
+      usernameInput.classList.remove("input-error");
+    });
 
-
-        /* USERNAME */
-
-        if (username.length < 9) {
-
-          usernameInput.classList.add(
-            "input-error"
-          );
-
-          usernameInput.focus();
-
-          showToast(
-            "Datos incompletos",
-            "Introduce un teléfono o número de cuenta de al menos 9 caracteres."
-          );
-
-          return;
-        }
-
-
-        /* PASSWORD */
-
-        if (password.length < 3) {
-
-          passwordInput.classList.add(
-            "input-error"
-          );
-
-          passwordInput.focus();
-
-          showToast(
-            "Datos incompletos",
-            "Introduce una contraseña de al menos 3 caracteres."
-          );
-
-          return;
-        }
-
-
-        /* LOADING */
-
-        loginButton.classList.add(
-          "loading"
-        );
-
-        loginButton.disabled = true;
-
-
-        /*
-          Comportamiento de demostración.
-          No se envían ni almacenan credenciales.
-        */
-
-        setTimeout(() => {
-
-          loginButton.classList.remove(
-            "loading"
-          );
-
-          loginButton.disabled = false;
-
-          showToast(
-            "Acceso no disponible",
-            "No se pudo completar el inicio de sesión debido a restricciones de red."
-          );
-
-        }, 1500);
-
-      }
-    );
-
-
-    /* =====================================
-       CLEAR ERRORS
-    ====================================== */
-
-    usernameInput.addEventListener(
-      "input",
-      () => {
-
-        usernameInput.classList.remove(
-          "input-error"
-        );
-
-      }
-    );
-
-
-    passwordInput.addEventListener(
-      "input",
-      () => {
-
-        passwordInput.classList.remove(
-          "input-error"
-        );
-
-      }
-    );
-
+    passwordInput.addEventListener("input", () => {
+      passwordInput.classList.remove("input-error");
+    });
   </script>
 
 </body>
